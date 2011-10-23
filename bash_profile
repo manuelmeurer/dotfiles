@@ -1,9 +1,9 @@
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f $HOME/.git-completion.bash ]; then
+  . $HOME/.git-completion.bash
 fi
 
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+  . $HOME/.bash_aliases
 fi
 
 if [ -f $HOME/.rvm/scripts/rvm ]; then
@@ -31,4 +31,10 @@ export S3_SECRET=kZkmIxR1Bb9hpFMEiCAvUA1kkGVOt0hlbXuTTIZv
 # \[\033[01;36m\] = magenta
 # \[\033[00m\]    = white
 
-export PS1='\[\033[01;34m\]\t \[\033[01;36m\]($(~/.rvm/bin/rvm-prompt i v p g))\[\033[01;32m\] \w$(__git_ps1 "(%s)")\[\033[00m\] '
+if [ -f $HOME/.rvm/bin/rvm-prompt ]; then
+  export PS1='\[\033[01;34m\]\t \[\033[01;36m\]($(~/.rvm/bin/rvm-prompt i v p g))\[\033[01;32m\] \w$(__git_ps1 "(%s)")\[\033[00m\] '
+fi
+
+if [ -f $HOME/.bashrc ]; then
+  . $HOME/.bashrc
+fi
