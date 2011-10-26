@@ -44,18 +44,20 @@ if defined?(Rails)
     RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
   end
 
-  current_app = Dir.pwd.match(/apps\/([^\/]+)/)[1]
+  unless IRB.conf[:PROMPT][:RVM].nil?
+    current_app = Dir.pwd.match(/apps\/([^\/]+)/)[1]
 
-  IRB.conf[:PROMPT].reverse_merge!(
-    :RVM_WITH_CURRENT_APP => {
-      :PROMPT_I    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_I]}",
-      :PROMPT_N    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_N]}",
-      :PROMPT_S    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_S]}",
-      :PROMPT_C    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_C]}",
-      :RETURN      => IRB.conf[:PROMPT][:RVM][:RETURN],
-      :AUTO_INDENT => true
-    }
-  )
+    IRB.conf[:PROMPT].reverse_merge!(
+      :RVM_WITH_CURRENT_APP => {
+        :PROMPT_I    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_I]}",
+        :PROMPT_N    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_N]}",
+        :PROMPT_S    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_S]}",
+        :PROMPT_C    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_C]}",
+        :RETURN      => IRB.conf[:PROMPT][:RVM][:RETURN],
+        :AUTO_INDENT => true
+      }
+    )
 
-  IRB.conf[:PROMPT_MODE] = :RVM_WITH_CURRENT_APP
+    IRB.conf[:PROMPT_MODE] = :RVM_WITH_CURRENT_APP
+  end
 end
