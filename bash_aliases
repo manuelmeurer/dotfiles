@@ -40,6 +40,7 @@ alias blg='bundle list | grep'
 
 alias cpd='bundle exec cap production deploy'
 alias csd='bundle exec cap staging deploy'
+alias cwd='bundle exec cap worker deploy'
 
 alias psg='ps aux | grep'
 
