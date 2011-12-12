@@ -22,6 +22,8 @@ alias rds='bundle exec rake db:seed --trace'
 alias rdd='bundle exec rake db:drop --trace'
 alias rdr='bundle exec rake db:rollback --trace'
 
+alias ann='bundle exec annotate -p before'
+
 alias glg='gem list | grep'
 alias gi='gem install'
 alias gu='gem uninstall'
@@ -42,6 +44,7 @@ alias cpd='bundle exec cap production deploy'
 alias csd='bundle exec cap staging deploy'
 alias cwd='bundle exec cap worker deploy'
 alias cpda='bundle exec cap production deploy:app_config'
+alias csda='bundle exec cap staging deploy:app_config'
 alias cwda='bundle exec cap worker deploy:app_config'
 
 alias psg='ps aux | grep'
