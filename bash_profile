@@ -14,7 +14,6 @@ if [ -f $rvm_path/scripts/completion ]; then
   . $rvm_path/scripts/completion
 fi
 
-export EDITOR='mate -w'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
