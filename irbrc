@@ -1,5 +1,7 @@
 require 'rubygems' unless defined?(Gem)
 
+# IRB completion and history
+
 require 'irb/completion'
 require 'irb/ext/save-history'
 
@@ -7,12 +9,14 @@ IRB.conf[:HISTORY_FILE] = [ENV['HOME'], '.irb-history'].join('/')
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:AUTO_INDENT]  = true
 
+# Load libs
+
 require 'bundler'
 
 begin
   Bundler.require :console
 rescue Bundler::GemfileNotFound
-  %w(rubygems wirble hirb pp awesome_print).each do |lib|
+  %w(rubygems wirble hirb pp awesome_print looksee).each do |lib|
     begin
       require lib
     rescue LoadError => e
@@ -20,6 +24,14 @@ rescue Bundler::GemfileNotFound
     end
   end
 end
+
+# Looksee
+
+if defined?(Looksee)
+  Looksee.editor = 'mate -l%l %f'
+end
+
+# Wirble
 
 if defined?(Wirble)
   Wirble.init(
@@ -29,9 +41,13 @@ if defined?(Wirble)
   )
 end
 
+# Hirb
+
 if defined?(Hirb)
   Hirb.enable
 end
+
+# Set Rails logger
 
 if defined?(ActiveRecord)
   ActiveRecord::Base.logger = Logger.new(STDOUT)
@@ -43,16 +59,21 @@ if defined?(Rails)
 
     RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
   end
+end
 
+# Set IRB prompt
+
+if defined?(Rails)
   unless IRB.conf[:PROMPT][:RVM].nil?
-    current_app = Dir.pwd.match(/apps\/([^\/]+)/)[1]
+    current_app = Dir.pwd.match(/([^\/]+)$/)[1]
+    default_prompt = "#{current_app} (#{Rails.env})"
 
     IRB.conf[:PROMPT].reverse_merge!(
       :RVM_WITH_CURRENT_APP => {
-        :PROMPT_I    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_I]}",
-        :PROMPT_N    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_N]}",
-        :PROMPT_S    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_S]}",
-        :PROMPT_C    => "#{current_app} #{IRB.conf[:PROMPT][:RVM][:PROMPT_C]}",
+        :PROMPT_I    => "#{default_prompt} #{IRB.conf[:PROMPT][:RVM][:PROMPT_I]}",
+        :PROMPT_N    => "#{default_prompt} #{IRB.conf[:PROMPT][:RVM][:PROMPT_N]}",
+        :PROMPT_S    => "#{default_prompt} #{IRB.conf[:PROMPT][:RVM][:PROMPT_S]}",
+        :PROMPT_C    => "#{default_prompt} #{IRB.conf[:PROMPT][:RVM][:PROMPT_C]}",
         :RETURN      => IRB.conf[:PROMPT][:RVM][:RETURN],
         :AUTO_INDENT => true
       }
