@@ -65,8 +65,7 @@ end
 
 if defined?(Rails)
   unless IRB.conf[:PROMPT][:RVM].nil?
-    current_app = Dir.pwd.match(/([^\/]+)$/)[1]
-    default_prompt = "#{current_app} (#{Rails.env})"
+    default_prompt = "#{Rails.application.class.parent_name} (#{Rails.env})"
 
     IRB.conf[:PROMPT].reverse_merge!(
       :RVM_WITH_CURRENT_APP => {
