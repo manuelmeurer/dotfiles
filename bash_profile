@@ -31,7 +31,7 @@ export AWS_SECRET=kZkmIxR1Bb9hpFMEiCAvUA1kkGVOt0hlbXuTTIZv
 # \[\033[00m\]    = white
 
 if [ -f $HOME/.rvm/bin/rvm-prompt ]; then
-  export PS1='\[\033[01;34m\]\t \[\033[01;36m\]($(~/.rvm/bin/rvm-prompt i v p g))\[\033[01;32m\] \w$(__git_ps1 "(%s)")\[\033[00m\] '
+  export PS1='\[\033[01;34m\]\t \[\033[01;32m\]\h \[\033[01;36m\]($(~/.rvm/bin/rvm-prompt i v p g))\[\033[01;32m\] \w$(__git_ps1 "(%s)")\[\033[00m\] '
 fi
 
 if [ -f $HOME/.bashrc ]; then
