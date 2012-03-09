@@ -18,8 +18,8 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 
-export S3_KEY=AKIAI4KUNF7NUV7JXILQ
-export S3_SECRET=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
+export AWS_KEY=AKIAI4KUNF7NUV7JXILQ
+export AWS_SECRET=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
 
 # \[\033[01;30m\] = black
 # \[\033[01;31m\] = red
