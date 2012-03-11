@@ -59,4 +59,3 @@ alias ttr='touch tmp/restart.txt'
 alias scpresume='rsync --partial --progress --rsh=ssh'
 
 alias g=git
-alias git=hub
