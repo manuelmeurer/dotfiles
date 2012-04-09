@@ -4,9 +4,16 @@
 [branch]
   autosetupmerge = true
 [alias]
+  a   = add
+  ap  = add --patch
+  b   = branch
+  ba  = branch -a
   st  = status
-  ci  = commit
+  c   = commit
+  cm  = commit -m
+  cam = commit -am
   co  = checkout
+  p   = push
   pu  = pull
   pur = pull --rebase
   cp  = cherry-pick
@@ -14,7 +21,6 @@
   dic = diff --cached
   re  = rebase
   rec = rebase --continue
-  p   = add --patch
   rh  = reset head
   l   = log --all --pretty=format:\"%h %ai | %s%d [%an]\" --graph --date=short
 [color]
