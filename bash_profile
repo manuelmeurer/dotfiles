@@ -14,6 +14,7 @@ if [ -f $rvm_path/scripts/completion ]; then
   . $rvm_path/scripts/completion
 fi
 
+export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
