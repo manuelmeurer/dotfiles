@@ -4,6 +4,7 @@
 [branch]
   autosetupmerge = true
 [alias]
+  s   = show
   a   = add
   ap  = add --patch
   b   = branch
@@ -16,6 +17,8 @@
   p   = push
   pu  = pull
   pur = pull --rebase
+  m   = merge
+  r   = revert
   cp  = cherry-pick
   di  = diff
   dic = diff --cached
