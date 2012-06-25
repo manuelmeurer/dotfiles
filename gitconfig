@@ -25,7 +25,7 @@
   re  = rebase
   rec = rebase --continue
   rh  = reset head
-  l   = log --all --pretty=format:\"%h %ai | %s%d [%an]\" --graph --date=short
+  l   = log --all --pretty=format:\"%h %ai | %s%d [%an]\" --graph --date=short -100
 [color]
   ui = auto
 [color "branch"]
