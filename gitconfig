@@ -4,28 +4,31 @@
 [branch]
   autosetupmerge = true
 [alias]
-  s   = show
-  a   = add
-  ap  = add --patch
-  b   = branch
-  ba  = branch -a
-  st  = status
-  c   = commit
-  cm  = commit -m
-  cam = commit -am
-  co  = checkout
-  p   = push
-  pu  = pull
-  pur = pull --rebase
-  m   = merge
-  r   = revert
-  cp  = cherry-pick
-  di  = diff
-  dic = diff --cached
-  re  = rebase
-  rec = rebase --continue
-  rh  = reset head
-  l   = log --all --pretty=format:\"%h %ai | %s%d [%an]\" --graph --date=short -100
+  s    = show
+  a    = add
+  ap   = add --patch
+  b    = branch
+  ba   = branch -a
+  st   = status
+  c    = commit
+  cm   = commit -m
+  cam  = commit -am
+  cmm  = commit --amend --reuse-message=HEAD
+  camm = commit -a --amend --reuse-message=HEAD
+  co   = checkout
+  p    = push
+  pu   = pull
+  pur  = pull --rebase
+  m    = merge
+  r    = revert
+  cp   = cherry-pick
+  di   = diff
+  dic  = diff --cached
+  re   = rebase
+  rec  = rebase --continue
+  rh   = reset head
+  l    = log --all --pretty=format:\"%h %ai | %s%d [%an]\" --graph --date=short -100
+  oldest-ancestor = !bash -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
 [color]
   ui = auto
 [color "branch"]
