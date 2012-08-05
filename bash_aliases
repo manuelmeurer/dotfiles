@@ -43,9 +43,7 @@ alias blg='bundle list | grep'
 alias cpd='bundle exec cap production deploy'
 alias csd='bundle exec cap staging deploy'
 alias cwd='bundle exec cap worker deploy'
-alias cpda='bundle exec cap production deploy:app_config'
-alias csda='bundle exec cap staging deploy:app_config'
-alias cwda='bundle exec cap worker deploy:app_config'
+alias cld='bundle exec cap legacy deploy'
 
 alias psg='ps aux | grep'
 
