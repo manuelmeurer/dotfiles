@@ -34,6 +34,8 @@ alias sgi='sudo gem install'
 alias sgu='sudo gem uninstall'
 alias sgcl='sudo gem cleanup'
 
+alias sai='sudo apt-get install'
+
 alias bi='bundle install'
 alias be='bundle exec'
 alias bu='bundle update'
