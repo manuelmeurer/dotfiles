@@ -62,5 +62,6 @@ alias scpresume='rsync --partial --progress --rsh=ssh'
 # Check if hub is installed and, if so, alias to git
 command -v hub >/dev/null 2>&1 && alias git=hub
 
-alias g=git
-alias h=heroku
+alias g='git'
+alias h='heroku'
+alias cs='consular start'
