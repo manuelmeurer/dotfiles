@@ -59,26 +59,3 @@ if defined?(Rails)
     RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
   end
 end
-
-# Set IRB prompt
-
-if defined?(Rails)
-  rvm_prompt = IRB.conf[:PROMPT][:RVM]
-
-  unless rvm_prompt.nil?
-    default_prompt = "#{Rails.application.class.parent_name} (#{Rails.env})"
-
-    IRB.conf[:PROMPT].reverse_merge!(
-      RVM_WITH_CURRENT_APP: {
-        PROMPT_I:    "#{default_prompt} #{rvm_prompt[:PROMPT_I]}",
-        PROMPT_N:    "#{default_prompt} #{rvm_prompt[:PROMPT_N]}",
-        PROMPT_S:    "#{default_prompt} #{rvm_prompt[:PROMPT_S]}",
-        PROMPT_C:    "#{default_prompt} #{rvm_prompt[:PROMPT_C]}",
-        RETURN:      rvm_prompt[:RETURN],
-        AUTO_INDENT: true
-      }
-    )
-
-    IRB.conf[:PROMPT_MODE] = :RVM_WITH_CURRENT_APP
-  end
-end

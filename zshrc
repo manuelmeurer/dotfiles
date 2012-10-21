@@ -36,15 +36,11 @@ if [ -f $HOME/.bash_aliases ]; then
   . $HOME/.bash_aliases
 fi
 
-if [ -f $HOME/.rvm/scripts/rvm ]; then
-  . $HOME/.rvm/scripts/rvm
-fi
-
 export EDITOR='st -w'
 export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$HOME/.rvm/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 
