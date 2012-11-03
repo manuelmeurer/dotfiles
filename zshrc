@@ -51,3 +51,5 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' special-dirs true
 
 eval "$(rbenv init -)"
+
+[ -s "/Users/manuel/.scm_breeze/scm_breeze.sh" ] && source "/Users/manuel/.scm_breeze/scm_breeze.sh"
