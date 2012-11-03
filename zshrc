@@ -40,7 +40,7 @@ export EDITOR='st -w'
 export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$HOME/.rbenv/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/heroku/bin:$HOME/.rbenv/bin:$PATH
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 
