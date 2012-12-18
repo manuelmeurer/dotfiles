@@ -50,6 +50,11 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # Enable completion for ../
 zstyle ':completion:*' special-dirs true
 
+# Show only local files in Git completion
+__git_files () {
+  _wanted files expl 'local files' _files
+}
+
 eval "$(rbenv init -)"
 
 [ -s "/Users/manuel/.scm_breeze/scm_breeze.sh" ] && source "/Users/manuel/.scm_breeze/scm_breeze.sh"
