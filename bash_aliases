@@ -54,6 +54,7 @@ alias testtail='tail -f log/test.log'
 alias statail='tail -f log/staging.log'
 alias prodtail='tail -f log/production.log'
 alias legtail='tail -f log/legacy.log'
+alias cpg='cat log/production.log | grep'
 
 alias ttr='touch tmp/restart.txt'
 
