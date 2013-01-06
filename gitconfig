@@ -47,3 +47,5 @@
   untracked = cyan
 [push]
   default = tracking
+[credential]
+  helper = osxkeychain

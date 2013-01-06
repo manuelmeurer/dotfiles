@@ -1,29 +1,35 @@
-if [ -f $HOME/.git-completion.bash ]; then
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH=$HOME/.rbenv/bin:$PATH
+  eval "$(rbenv init -)"
+fi
+
+if [ -f "$HOME/.git-completion.bash" ]; then
   . $HOME/.git-completion.bash
 fi
 
-if [ -f $HOME/.bash_aliases ]; then
+if [ -f "/usr/local/etc/bash_completion.d/hub.bash_completion.sh" ]; then
+  . /usr/local/etc/bash_completion.d/hub.bash_completion.sh
+fi
+
+if [ -f "$HOME/.bash_aliases" ]; then
   . $HOME/.bash_aliases
 fi
 
-export GREP_OPTIONS='--color=auto'
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
+if [ -f "$HOME/.scm_breeze/scm_breeze.sh" ]; then
+  . $HOME/.scm_breeze/scm_breeze.sh
+fi
 
-# \[\033[01;30m\] = black
-# \[\033[01;31m\] = red
-# \[\033[01;32m\] = green
-# \[\033[01;33m\] = yellow
-# \[\033[01;34m\] = blue
-# \[\033[01;35m\] = pink
-# \[\033[01;36m\] = magenta
-# \[\033[00m\]    = white
+export RUBY_GC_MALLOC_LIMIT="60000000"
+export RUBY_FREE_MIN="200000"
+export GREP_OPTIONS="--color=auto"
+export CLICOLOR="1"
+export LSCOLORS="ExFxCxDxBxegedabagacad"
+export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH"
 
-export PS1='\[\033[01;34m\]\t \[\033[01;32m\]\u@\h \[\033[01;32m\] \w$(__git_ps1 "(%s)")\[\033[00m\] '
+if [ -f "$HOME/.bash_prompt" ]; then
+  . $HOME/.bash_prompt
+fi
 
-[ -s "/Users/manuel/.scm_breeze/scm_breeze.sh" ] && source "/Users/manuel/.scm_breeze/scm_breeze.sh"
-
-if [ -f $HOME/.bashrc ]; then
+if [ -f "$HOME/.bashrc" ]; then
   . $HOME/.bashrc
 fi

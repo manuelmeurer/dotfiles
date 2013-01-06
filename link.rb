@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
 
 ignore = [
-  File.basename(__FILE__)
+  /^#{File.basename(__FILE__)}$/,
+  /\.sublime-/
 ]
 
 Dir['*'].each do |f|
-  next if ignore.any? { |i| i === f }
+  next if ignore.any? { |i| i =~ f }
 
   file    = File.expand_path("./#{f}")
   dotfile = File.expand_path("~/.#{f}")
