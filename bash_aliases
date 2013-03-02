@@ -1,4 +1,4 @@
-alias ls="ls -lah"
+alias ls="ls -lah --color=auto"
 
 alias ss="script/server"
 alias sc="script/console"
