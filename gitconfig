@@ -1,6 +1,6 @@
 [user]
   email = manuel.meurer@gmail.com
-  name = Manuel Meurer
+  name  = Manuel Meurer
 [branch]
   autosetupmerge = true
 [alias]
@@ -49,3 +49,5 @@
   default = tracking
 [credential]
   helper = osxkeychain
+[core]
+  excludesfile = ~/.gitignore
