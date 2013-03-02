@@ -1,0 +1,15 @@
+.env
+.DS_Store
+.powder
+.sass-cache
+.bundle
+.rvmrc
+.routes
+.svn
+*.sublime-*
+log/*
+tmp/*
+tmp/**/*
+config/database.yml
+public/system
+public/uploads
