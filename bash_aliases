@@ -1,4 +1,4 @@
-alias ls="ls -lah --color=auto"
+alias ls="ls -lah"
 
 alias ss="script/server"
 alias sc="script/console"
@@ -47,8 +47,6 @@ alias csd="bundle exec cap staging deploy"
 alias cwd="bundle exec cap worker deploy"
 alias cld="bundle exec cap legacy deploy"
 
-alias psg="ps aux | grep"
-
 alias devtail="tail -f log/development.log"
 alias testtail="tail -f log/test.log"
 alias statail="tail -f log/staging.log"
@@ -66,3 +64,6 @@ command -v hub >/dev/null 2>&1 && alias git=hub
 alias g="git"
 alias h="heroku"
 alias cs="consular start"
+
+function fname() { find . -iname "*$@*"; }
+function psgrep() { ps auxf | grep -v grep | grep "$@" -i --color=auto; }
