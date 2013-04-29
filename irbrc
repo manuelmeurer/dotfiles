@@ -1,10 +1,10 @@
 # Break out of the Bundler jail
 # from https://github.com/ConradIrwin/pry-debundle/blob/master/lib/pry-debundle.rb
-if defined?(Bundler)
-  Gem.post_reset_hooks.reject! { |hook| hook.source_location.first =~ %r(/bundler/) }
-  Gem::Specification.reset
-  load 'rubygems/custom_require.rb'
-end
+# if defined?(Bundler)
+#   Gem.post_reset_hooks.reject! { |hook| hook.source_location.first =~ %r(/bundler/) }
+#   Gem::Specification.reset
+#   load 'rubygems/custom_require.rb'
+# end
 
 # Try to load Pry instead of IRB
 begin
@@ -23,12 +23,11 @@ IRB.conf[:HISTORY_FILE] = [ENV['HOME'], '.irb-history'].join('/')
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:AUTO_INDENT]  = true
 
-%w(pp awesome_print).each do |lib|
-  begin
-    require lib
-  rescue LoadError => e
-    warn "Couldn't load lib #{lib}: #{e}"
-  end
+begin
+  require 'awesome_print'
+  AwesomePrint.irb!
+rescue LoadError => e
+  warn "Couldn't load awesome_print: #{e}"
 end
 
 # Set Rails logger
