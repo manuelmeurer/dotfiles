@@ -66,4 +66,4 @@ alias h="heroku"
 alias cs="consular start"
 
 function fname() { find . -iname "*$@*"; }
-function psgrep() { ps auxf | grep -v grep | grep "$@" -i --color=auto; }
+function psg() { ps auxf | grep -v grep | grep "$@" -i --color=auto; }
