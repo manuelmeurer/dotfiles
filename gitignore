@@ -1,3 +1,4 @@
+.ruby-version
 .env
 .DS_Store
 .powder
@@ -10,6 +11,8 @@
 log/*
 tmp/*
 tmp/**/*
-config/database.yml
 public/system
 public/uploads
+database.yml
+mongoid.yml
+settings.yml
