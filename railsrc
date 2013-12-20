@@ -2,4 +2,4 @@
 --skip-bundle
 --skip-test-unit
 --skip-javascript
---database=mysql
+--database=postgresql
