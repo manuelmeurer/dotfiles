@@ -18,3 +18,4 @@ database.yml
 mongoid.yml
 settings.yml
 newrelic.yml
+secrets.yml

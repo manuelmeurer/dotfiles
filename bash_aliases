@@ -19,7 +19,7 @@ alias rdm0="bundle exec rake db:migrate VERSION=0 --trace"
 alias rdmr="bundle exec rake db:migrate:redo --trace"
 alias rdtc="bundle exec rake db:test:clone_structure --trace"
 alias rds="bundle exec rake db:seed --trace"
-alias rdd="bundle exec rake db:drop --trace"
+alias rdd="bundle exec rake environment db:drop --trace" # Load environment so custom drop task for Postgres is loaded
 alias rdr="bundle exec rake db:rollback --trace"
 
 alias ann="bundle exec annotate -p before"
