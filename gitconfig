@@ -1,15 +1,13 @@
 [user]
   email = manuel@krautcomputing.com
   name  = Manuel Meurer
-[branch]
-  autosetupmerge = true
 [alias]
-  s    = show
+  s    = show --word-diff
   a    = add
   ap   = add --patch
   b    = branch
   ba   = branch -a
-  st   = status
+  st   = status -sb
   c    = commit
   cm   = commit -m
   cam  = commit -am
@@ -22,12 +20,13 @@
   m    = merge
   r    = revert
   cp   = cherry-pick
-  di   = diff
-  dic  = diff --cached
+  di   = diff --word-diff
+  dic  = diff --word-diff --cached
   re   = rebase
   rec  = rebase --continue
   rh   = reset head
-  l    = log --all --pretty=format:\"%h %ai | %s%d [%an]\" --graph --date=short -100
+  l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(red)%d\" --graph --decorate --date=short
+  ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(red)%d\" --graph --decorate --date=short --numstat
   oldest-ancestor = !bash -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
 [color]
   ui = auto
@@ -46,7 +45,7 @@
   changed   = green
   untracked = cyan
 [push]
-  default = tracking
+  default = upstream
 [credential]
   helper = osxkeychain
 [core]
