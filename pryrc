@@ -23,7 +23,11 @@ end
 #   warn "Couldn't load pry-debugger: #{e}"
 # end
 
-Pry.config.prompt_name = File.basename(Dir.pwd)
+Pry.config.prompt_name = if defined?(Rails)
+  "#{Rails.application.class.parent_name} #{Rails.env.upcase}"
+else
+  File.basename(Dir.pwd)
+end
 
 Pry.config.exception_handler = ->(output, exception, _pry_) do
   output.puts exception
