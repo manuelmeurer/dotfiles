@@ -9,7 +9,6 @@ alias sr="script/runner"
 alias rs="bundle exec rails server"
 alias rc="bundle exec rails console"
 alias rg="bundle exec rails generate"
-alias rr="bundle exec rails runner"
 alias rgm="bundle exec rails generate migration"
 alias rpi="bundle exec rails plugin install"
 
@@ -21,6 +20,8 @@ alias rdtc="bundle exec rake db:test:clone_structure --trace"
 alias rds="bundle exec rake db:seed --trace"
 alias rdd="bundle exec rake environment db:drop --trace" # Load environment so custom drop task for Postgres is loaded
 alias rdr="bundle exec rake db:rollback --trace"
+alias rr="bundle exec rake routes --trace"
+alias rrg="bundle exec rake routes --trace | grep"
 
 alias ann="bundle exec annotate -p before"
 

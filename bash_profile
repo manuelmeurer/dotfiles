@@ -29,6 +29,7 @@ export GREP_OPTIONS="--color=auto"
 export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH"
+export LESS=-RFX
 
 if [ -f "$HOME/.bash_prompt" ]; then
   . $HOME/.bash_prompt

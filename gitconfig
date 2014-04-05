@@ -2,7 +2,7 @@
   email = manuel@krautcomputing.com
   name  = Manuel Meurer
 [alias]
-  s    = show --word-diff
+  s    = show
   a    = add
   ap   = add --patch
   b    = branch
@@ -20,13 +20,13 @@
   m    = merge
   r    = revert
   cp   = cherry-pick
-  di   = diff --word-diff
-  dic  = diff --word-diff --cached
+  di   = diff
+  dic  = diff --cached
   re   = rebase
   rec  = rebase --continue
   rh   = reset head
-  l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(red)%d\" --graph --decorate --date=short
-  ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(red)%d\" --graph --decorate --date=short --numstat
+  l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short
+  ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short --numstat
   oldest-ancestor = !bash -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
 [color]
   ui = auto
