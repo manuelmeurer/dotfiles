@@ -3,9 +3,10 @@ gem 'awesome_print', '1.2.0'
 gem 'log_buddy',     '0.7.0'
 
 group :development do
+  gem 'spring',            '1.1.2'
   gem 'quiet_assets',      '1.0.2'
   gem 'annotate',          '2.6.0', require: false
-  gem 'better_errors',     '1.0.1'
+  gem 'better_errors',     '1.1.0'
   gem 'binding_of_caller', '0.7.2' # For better_errors
   gem 'pry-remote',        '0.1.7'
   gem 'pry-byebug',        '1.2.0'
