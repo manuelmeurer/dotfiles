@@ -44,8 +44,6 @@
   added     = yellow
   changed   = green
   untracked = cyan
-[push]
-  default = upstream
 [credential]
   helper = osxkeychain
 [core]

@@ -31,6 +31,10 @@ export LSCOLORS="ExFxCxDxBxegedabagacad"
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH"
 export LESS=-RFX
 
+if [ -f "$HOME/.git-prompt.sh" ]; then
+  . $HOME/.git-prompt.sh
+fi
+
 if [ -f "$HOME/.bash_prompt" ]; then
   . $HOME/.bash_prompt
 fi
