@@ -48,3 +48,5 @@
   helper = osxkeychain
 [core]
   excludesfile = ~/.gitignore
+[push]
+  default = simple
