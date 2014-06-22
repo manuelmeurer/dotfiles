@@ -26,6 +26,8 @@ export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH"
 export LESS=-RFX
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 if [ -f "$HOME/.git-prompt.sh" ]; then
   . $HOME/.git-prompt.sh
