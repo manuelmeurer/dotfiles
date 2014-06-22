@@ -12,7 +12,7 @@ Dir['*'].each do |f|
   dotfile = File.expand_path("~/.#{f}")
 
   if File.exists?(dotfile) || File.symlink?(dotfile)
-    next if ENV['SKIP_EXISTING'] == 'true'
+    next if ENV['SKIP_EXISTING'].try(:downcase).try(:strip) == 'true'
     print "File #{dotfile} already exists. Overwrite? (yN) "
     next unless gets.chomp == "y"
     File.delete(dotfile)
