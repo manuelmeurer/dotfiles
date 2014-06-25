@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'fileutils'
+
 ignore = [
   /^#{File.basename(__FILE__)}$/,
   /\.sublime-/
