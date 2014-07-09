@@ -1,6 +1,6 @@
 begin
   require 'awesome_print'
-  Pry.config.print = ->(output, value) do
+  Pry.config.print = ->(output, value, _) do
     output.puts value.ai
     output.puts
   end
