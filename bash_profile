@@ -19,12 +19,9 @@ if [ -f "$HOME/.bash_aliases" ]; then
   . $HOME/.bash_aliases
 fi
 
-export RUBY_GC_MALLOC_LIMIT="60000000"
-export RUBY_FREE_MIN="200000"
 export GREP_OPTIONS="--color=auto"
 export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH"
 export LESS=-RFX
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
