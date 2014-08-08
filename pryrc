@@ -8,21 +8,6 @@ rescue LoadError => e
   warn "Couldn't load awesome_print: #{e}"
 end
 
-# begin
-#   require 'pry-debugger'
-#   commands = {
-#     c: 'continue',
-#     s: 'step',
-#     n: 'next',
-#     f: 'finish'
-#   }
-#   commands.each do |shortcut, command|
-#     Pry.commands.alias_command shortcut, command
-#   end
-# rescue LoadError => e
-#   warn "Couldn't load pry-debugger: #{e}"
-# end
-
 Pry.config.prompt_name = if defined?(Rails)
   app_name = Rails.application.class.parent_name
   case Rails.env
