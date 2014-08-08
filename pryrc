@@ -27,8 +27,17 @@ else
 end
 
 Pry.config.exception_handler = ->(output, exception, _pry_) do
-  output.puts exception
-  output.puts exception.backtrace.first(10)
+  exceptions = [exception]
+  while exception.respond_to?(:cause) && !exception.cause.nil?
+    exceptions << exception.cause
+    exception = exception.cause
+  end
+  exceptions.each do |exception|
+    output.puts "#{'caused by: ' unless exception == exceptions.first}#{exception.class}: #{exception.message}"
+    exception.backtrace.take(10).each do |line|
+      output.puts "  #{line}"
+    end
+  end
   _pry_.run_command 'cat --ex'
   output.puts
 end
