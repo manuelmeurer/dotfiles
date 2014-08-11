@@ -33,8 +33,20 @@ Pry.config.exception_handler = ->(output, exception, _pry_) do
     exception = exception.cause
   end
   exceptions.each do |exception|
-    output.puts "#{'caused by: ' unless exception == exceptions.first}#{exception.class}: #{exception.message}"
-    exception.backtrace.take(10).each do |line|
+    default_exception_message = "#{exception.class}: #{exception.message}"
+    exception_message, backtrace = if exception == exceptions.first
+      [
+        default_exception_message,
+        exception.backtrace.take(10)
+      ]
+    else
+      [
+        "caused by: #{default_exception_message}",
+        exception.backtrace
+      ]
+    end
+    output.puts exception_message
+    backtrace.each do |line|
       output.puts "  #{line}"
     end
   end
