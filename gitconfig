@@ -3,6 +3,8 @@
   name  = Manuel Meurer
 [alias]
   s    = show
+  sh   = stash
+  sp   = stash pop
   a    = add
   ap   = add --patch
   b    = branch
@@ -15,6 +17,8 @@
   camm = commit -a --amend --reuse-message=HEAD
   co   = checkout
   p    = push
+  po   = !bash -c 'git push origin `git rev-parse --abbrev-ref HEAD` -u' -
+  pf   = push --force
   pu   = pull
   pur  = pull --rebase
   m    = merge
@@ -23,7 +27,10 @@
   di   = diff
   dic  = diff --cached
   re   = rebase
-  rec  = rebase --continue
+  rc   = rebase --continue
+  rs   = rebase --skip
+  ra   = rebase --abort
+  ri   = rebase --interactive head~10
   rh   = reset head
   l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short
   ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short --numstat
@@ -52,3 +59,9 @@
   excludesfile = ~/.gitignore
 [push]
   default = simple
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[rebase]
+  autosquash = true

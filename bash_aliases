@@ -65,7 +65,9 @@ command -v hub >/dev/null 2>&1 && alias git=hub
 
 alias g="git"
 alias h="heroku"
-alias cs="consular start"
+
+alias mb="bundle exec middleman build"
+alias ms="bundle exec middleman server"
 
 function fname() { find . -iname "*$@*"; }
 function psg() { ps aux | grep -v grep | grep "$@" -i --color=auto; }

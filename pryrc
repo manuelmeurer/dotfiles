@@ -54,4 +54,4 @@ Pry.config.exception_handler = ->(output, exception, _pry_) do
   output.puts
 end
 
-extend Rails::ConsoleMethods if defined?(Rails) && Rails.env.present?
+extend Rails::ConsoleMethods if defined?(Rails::ConsoleMethods) && Rails.env.present?

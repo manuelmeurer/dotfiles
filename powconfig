@@ -1,2 +1,2 @@
-export POW_WORKERS=1
+export POW_WORKERS=3
 export POW_TIMEOUT=3600

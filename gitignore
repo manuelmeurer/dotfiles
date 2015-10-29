@@ -1,4 +1,3 @@
-.ruby-version
 .env
 .DS_Store
 .powder
@@ -19,3 +18,4 @@ mongoid.yml
 settings.yml
 newrelic.yml
 secrets.yml
+config/deploy/infrastructure
