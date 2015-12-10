@@ -1,12 +1,15 @@
 begin
   require 'awesome_print'
+rescue LoadError => e
+  warn "Couldn't load awesome_print: #{e}"
+else
   Pry.config.print = ->(output, value, _) do
     output.puts value.ai
     output.puts
   end
-rescue LoadError => e
-  warn "Couldn't load awesome_print: #{e}"
 end
+
+Pry.config.command_prefix = '%'
 
 Pry.config.prompt_name = if defined?(Rails)
   app_name = Rails.application.class.parent_name
