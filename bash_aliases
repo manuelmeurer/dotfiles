@@ -60,6 +60,16 @@ alias ttr="touch tmp/restart.txt"
 
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
+function ghpr() {
+  repo=$(git config --list | grep 'remote\.origin\.url' | grep 'github\.com' | sed -E "s/.+(https:\/\/github.com\/|git@github\.com:)(.+)\.git/\2/")
+
+  [ -z "$repo" ] && echo "This doesn't seem like a GitHub repo." && return
+
+  branch=$(__git_ps1 %s)
+
+  open https://github.com/$repo/compare/$branch;
+}
+
 # Check if hub is installed and, if so, alias to git
 command -v hub >/dev/null 2>&1 && alias git=hub
 
