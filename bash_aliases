@@ -57,6 +57,8 @@ alias legtail="tail -f log/legacy.log"
 alias cpg="cat log/production.log | grep"
 
 alias ttr="touch tmp/restart.txt"
+alias fs="foreman start"
+alias ap="ansible-playbook"
 
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
