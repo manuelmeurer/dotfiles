@@ -68,3 +68,7 @@
   autosquash = true
 [commit]
   gpgsign = true
+[status]
+  showUntrackedFiles = all
+[transfer]
+  fsckObjects = true
