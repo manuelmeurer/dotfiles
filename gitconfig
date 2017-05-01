@@ -1,6 +1,7 @@
 [user]
   email = manuel@krautcomputing.com
   name  = Manuel Meurer
+  signingkey = 2806A868
 [alias]
   s    = show
   sh   = stash
@@ -65,3 +66,5 @@
   required = true
 [rebase]
   autosquash = true
+[commit]
+  gpgsign = true
