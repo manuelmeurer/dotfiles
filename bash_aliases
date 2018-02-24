@@ -23,7 +23,7 @@ alias rdr="bundle exec rake db:rollback --trace"
 alias rr="bundle exec rake routes --trace"
 alias rrg="bundle exec rake routes --trace | grep"
 
-alias ann="bundle exec annotate -p before --classified-sort"
+alias ann="bundle exec annotate -p after --classified-sort"
 
 alias glg="gem list | grep"
 alias gi="gem install"
