@@ -72,3 +72,5 @@
   showUntrackedFiles = all
 [transfer]
   fsckObjects = true
+[diff]
+  colorMoved = default
