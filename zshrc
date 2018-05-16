@@ -37,7 +37,6 @@ if [ -f $HOME/.bash_aliases ]; then
 fi
 
 export EDITOR='st -w'
-export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:/usr/local/heroku/bin:$HOME/.rbenv/bin:$PATH
