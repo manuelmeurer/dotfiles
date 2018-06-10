@@ -9,6 +9,7 @@
 .vagrant
 *.sublime-project
 *.sublime-workspace
+*.retry
 log/*
 tmp/*
 tmp/**/*
