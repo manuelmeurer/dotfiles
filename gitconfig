@@ -74,3 +74,5 @@
   fsckObjects = true
 [diff]
   colorMoved = default
+[fetch]
+  fsckobjects = false
