@@ -76,3 +76,5 @@
   colorMoved = default
 [fetch]
   fsckobjects = false
+[submodule]
+  recurse = true
