@@ -51,10 +51,8 @@ alias cld="bundle exec cap legacy deploy"
 
 alias devtail="tail -f log/development.log"
 alias testtail="tail -f log/test.log"
-alias statail="tail -f log/staging.log"
 alias prodtail="tail -f log/production.log"
-alias legtail="tail -f log/legacy.log"
-alias cpg="cat log/production.log | grep"
+alias pumatail="tail -f ~/Library/Logs/puma-dev.log"
 
 alias ttr="touch tmp/restart.txt"
 alias fs="foreman start"
