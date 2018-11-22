@@ -1,4 +1,5 @@
 alias ls="ls -lah"
+alias st="subl"
 
 alias ss="script/server"
 alias sc="script/console"
