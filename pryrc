@@ -9,8 +9,6 @@ else
   end
 end
 
-Pry.config.command_prefix = '%'
-
 Pry.config.prompt_name = if defined?(Rails)
   app_name = Rails.application.class.parent_name
   case Rails.env
