@@ -45,18 +45,12 @@ alias bu="bundle update"
 alias bo="bundle open"
 alias blg="bundle list | grep"
 
-alias cpd="bundle exec cap production deploy"
-alias csd="bundle exec cap staging deploy"
-alias cwd="bundle exec cap worker deploy"
-alias cld="bundle exec cap legacy deploy"
-
 alias devtail="tail -f log/development.log"
 alias testtail="tail -f log/test.log"
 alias prodtail="tail -f log/production.log"
 alias pumatail="tail -f ~/Library/Logs/puma-dev.log"
 
 alias ttr="touch tmp/restart.txt"
-alias fs="foreman start"
 alias ap="ansible-playbook"
 
 alias scpresume="rsync --partial --progress --rsh=ssh"
