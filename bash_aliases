@@ -74,6 +74,8 @@ alias h="heroku"
 alias mb="bundle exec middleman build"
 alias ms="bundle exec middleman server"
 
+alias uplink-prod-console="ssh -t worker01 'bash -ic \"cd /var/www/uplink/ && rc\"'"
+
 function fname() { find . -iname "*$@*"; }
 function psg() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
 function mcd() { mkdir $1 && cd $1; }
