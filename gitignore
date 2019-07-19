@@ -1,5 +1,7 @@
 .env
+.env.development
 .env.test
+.env.production
 .DS_Store
 .powder
 .sass-cache
@@ -22,3 +24,4 @@ settings.yml
 newrelic.yml
 secrets.yml
 config/deploy/infrastructure
+node_modules
