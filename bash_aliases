@@ -13,16 +13,16 @@ alias rg="bundle exec rails generate"
 alias rgm="bundle exec rails generate migration"
 alias rpi="bundle exec rails plugin install"
 
-alias rdc="bundle exec rake db:create --trace"
-alias rdm="bundle exec rake db:migrate --trace"
-alias rdm0="bundle exec rake db:migrate VERSION=0 --trace"
-alias rdmr="bundle exec rake db:migrate:redo --trace"
-alias rdtc="bundle exec rake db:test:clone_structure --trace"
-alias rds="bundle exec rake db:seed --trace"
-alias rdd="bundle exec rake environment db:drop --trace" # Load environment so custom drop task for Postgres is loaded
-alias rdr="bundle exec rake db:rollback --trace"
-alias rr="bundle exec rake routes --trace"
-alias rrg="bundle exec rake routes --trace | grep"
+alias rdc="bundle exec rails db:create --trace"
+alias rdm="bundle exec rails db:migrate --trace"
+alias rdm0="bundle exec rails db:migrate VERSION=0 --trace"
+alias rdmr="bundle exec rails db:migrate:redo --trace"
+alias rdtc="bundle exec rails db:test:clone_structure --trace"
+alias rds="bundle exec rails db:seed --trace"
+alias rdd="bundle exec rails environment db:drop --trace" # Load environment so custom drop task for Postgres is loaded
+alias rdr="bundle exec rails db:rollback --trace"
+alias rr="bundle exec rails routes --trace"
+alias rrg="bundle exec rails routes --trace | grep"
 
 alias ann="bundle exec annotate -p after --classified-sort"
 
