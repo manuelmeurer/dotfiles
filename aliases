@@ -24,8 +24,6 @@ alias rdr="bundle exec rails db:rollback --trace"
 alias rr="bundle exec rails routes --trace"
 alias rrg="bundle exec rails routes --trace | grep"
 
-alias ann="bundle exec annotate -p after --classified-sort"
-
 alias glg="gem list | grep"
 alias gi="gem install"
 alias gu="gem uninstall"
