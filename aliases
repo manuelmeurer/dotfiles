@@ -27,7 +27,7 @@ alias rrg="bundle exec rails routes --trace | grep"
 alias glg="gem list | grep"
 alias gi="gem install"
 alias gu="gem uninstall"
-alias go="gem open"
+alias gop="gem open"
 alias gcl="gem cleanup"
 alias gbtr="gem bump --tag --release"
 
