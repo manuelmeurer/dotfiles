@@ -1,3 +1,4 @@
+export PATH="/usr/local/sbin:$PATH"
 export EDITOR="subl -w"
 
 eval "$(rbenv init -)"
