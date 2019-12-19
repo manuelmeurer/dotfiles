@@ -10,14 +10,14 @@ else
 end
 
 Pry.config.prompt_name = if defined?(Rails)
-  app_name = Rails.application.class.parent_name
+  app_class = Rails.application.class
+  # DEPRECATION WARNING: `Module#parent_name` has been renamed to `module_parent_name`. `parent_name` is deprecated and will be removed in Rails 6.1.
+  app_name = app_class.respond_to?(:module_parent_name) ? app_class.module_parent_name : app_class.parent_name
   case Rails.env
   when 'development'
     Pry::Helpers::Text.green("#{app_name} DEV")
   when 'test'
     Pry::Helpers::Text.blue("#{app_name} TEST")
-  when 'staging'
-    Pry::Helpers::Text.cyan("#{app_name} STAG")
   when 'production'
     Pry::Helpers::Text.red("#{app_name} PROD")
   else
