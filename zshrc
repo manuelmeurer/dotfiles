@@ -5,6 +5,8 @@ export PATH="/usr/local/sbin:$GOPATH/bin:$PATH"
 # https://github.com/rails/spring/issues/606
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+[ -f `which brew` ] && export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
 eval "$(rbenv init -)"
 eval "$(scmpuff init -s)"
 
