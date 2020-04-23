@@ -1,10 +1,11 @@
 # Try to load Pry instead of IRB
 begin
   require 'pry'
-  Pry.start
-  exit
 rescue LoadError => e
   warn "Couldn't load pry: #{e}"
+else
+  Pry.start
+  exit
 end
 
 # IRB completion and history
@@ -24,9 +25,7 @@ end
 
 # Set Rails logger
 ActiveRecord::Base.logger = Logger.new(STDOUT) if defined?(ActiveRecord)
-if defined?(Rails)
-  unless Object.const_defined?('RAILS_DEFAULT_LOGGER')
-    require 'logger'
-    RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
-  end
+if defined?(Rails) && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
+  require 'logger'
+  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
 end
