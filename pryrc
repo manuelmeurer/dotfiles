@@ -1,7 +1,7 @@
 begin
-  require 'awesome_print'
+  require 'amazing_print'
 rescue LoadError => e
-  warn "Couldn't load awesome_print: #{e}"
+  warn "Couldn't load amazing_print: #{e}"
 else
   Pry.config.print = ->(output, value, _) do
     output.puts value.ai

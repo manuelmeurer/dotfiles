@@ -17,10 +17,11 @@ IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:AUTO_INDENT]  = true
 
 begin
-  require 'awesome_print'
-  AwesomePrint.irb!
+  require 'amazing_print'
 rescue LoadError => e
-  warn "Couldn't load awesome_print: #{e}"
+  warn "Couldn't load amazing_print: #{e}"
+else
+  AmazingPrint.irb!
 end
 
 # Set Rails logger
