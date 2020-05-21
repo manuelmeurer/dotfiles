@@ -1,7 +1,15 @@
-export EDITOR="subl -w"
+if hash subl 2>/dev/null; then
+  export EDITOR="subl -w"
+else
+  export EDITOR="vim"
+fi
 
-eval "$(rbenv init -)"
-eval "$(scmpuff init -s)"
+if hash rbenv 2>/dev/null; then
+  eval "$(rbenv init -)"
+fi
+if hash scmpuff 2>/dev/null; then
+  eval "$(scmpuff init -s)"
+fi
 
 [ -f $HOME/.git-completion.bash ] && source $HOME/.git-completion.bash
 [ -f $HOME/.aliases ] && source $HOME/.aliases

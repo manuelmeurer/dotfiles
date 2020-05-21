@@ -1,14 +1,24 @@
-export EDITOR="subl -w"
+if type subl > /dev/null; then
+  export EDITOR="subl -w"
+else
+  export EDITOR="vim"
+fi
+
 export GOPATH=$HOME/go
 export PATH="/usr/local/sbin:$GOPATH/bin:$PATH"
 
 # https://github.com/rails/spring/issues/606
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-[ -f `which brew` ] && export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-
-eval "$(rbenv init -)"
-eval "$(scmpuff init -s)"
+if type brew > /dev/null; then
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+fi
+if type rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
+if type scmpuff > /dev/null; then
+  eval "$(scmpuff init -s)"
+fi
 
 [ -f $HOME/.aliases ] && source $HOME/.aliases
 [ -f $HOME/.git-prompt.sh ] && source $HOME/.git-prompt.sh
