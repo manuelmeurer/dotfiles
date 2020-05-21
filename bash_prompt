@@ -79,5 +79,10 @@ PathShort="\w"
 PathFull="\W"
 NewLine="\n"
 Jobs="\j"
+Hostname="\H"
 
-export PS1="$NewLine$IBlack$Time24h $Yellow$PathShort$Cyan\$(__git_ps1) $IBlack\$ $Color_Off"
+if [[ -n $SSH_CLIENT ]]; then
+  export PS1="$NewLine$IBlack$Time24h $Red$Hostname $Yellow$PathShort$Cyan $IBlack\$ $Color_Off"
+else
+  export PS1="$NewLine$IBlack$Time24h $Yellow$PathShort$Cyan\$(__git_ps1) $IBlack\$ $Color_Off"
+fi
