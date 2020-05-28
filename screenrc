@@ -1,1 +1,2 @@
-caption always "%{= kc}Screen session on %H"
+caption always      "%{= kc}Screen session on %H"
+startup_message     off
