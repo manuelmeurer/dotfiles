@@ -36,7 +36,7 @@
   l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short
   ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short --numstat
   sm   = submodule
-  sm-pull = submodule foreach git pull origin master
+  sm-pull = submodule foreach git pull --rebase origin master
   oldest-ancestor = !bash -c 'diff -u <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
 [color]
   ui = auto
@@ -79,3 +79,5 @@
   fsckobjects = false
 [submodule]
   recurse = true
+[init]
+  defaultBranch = main
