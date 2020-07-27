@@ -2,5 +2,4 @@
 --skip-keeps
 --skip-bundle
 --skip-test-unit
---skip-javascript
 --database=postgresql
