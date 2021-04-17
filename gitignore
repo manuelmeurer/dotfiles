@@ -1,6 +1,7 @@
 *.retry
 *.sublime-project
 *.sublime-workspace
+*.code-workspace
 .bundle
 .DS_Store
 .env
