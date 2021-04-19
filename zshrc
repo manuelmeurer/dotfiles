@@ -1,5 +1,5 @@
-if type subl > /dev/null; then
-  export EDITOR="subl -w"
+if type code > /dev/null; then
+  export EDITOR="code"
 else
   export EDITOR="vim"
 fi
