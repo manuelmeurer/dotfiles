@@ -58,11 +58,12 @@
   helper = osxkeychain
 [core]
   excludesfile = ~/.gitignore
+  editor = code --wait
 [push]
   default = simple
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
   required = true
   process = git-lfs filter-process
 [rebase]
@@ -75,9 +76,14 @@
   fsckObjects = true
 [diff]
   colorMoved = default
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [fetch]
   fsckobjects = false
 [submodule]
   recurse = true
 [init]
   defaultBranch = main
+[http]
+  postBuffer = 524288000
