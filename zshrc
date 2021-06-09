@@ -30,6 +30,8 @@ zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
+setopt interactivecomments
+
 setopt PROMPT_SUBST
 NEWLINE=$'\n'
 PROMPT='${NEWLINE}%F{240}%* %F{yellow}%~%F{cyan}$(__git_ps1)%f %# '
@@ -37,3 +39,6 @@ PROMPT='${NEWLINE}%F{240}%* %F{yellow}%~%F{cyan}$(__git_ps1)%f %# '
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export GPG_TTY=`tty`
+
+# https://unix.stackexchange.com/questions/48577/modifying-the-zsh-shell-word-split
+WORDCHARS=${WORDCHARS//[\.\/\-_]}
