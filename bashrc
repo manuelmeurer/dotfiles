@@ -24,7 +24,7 @@ complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null || complete 
 export GPG_TTY=`tty`
 
 # https://github.com/memkind/memkind/issues/33#issuecomment-648317086
-if "$(uname)" == 'Darwin'; then
+if [[ "$(uname)" == 'Darwin' ]]; then
   alias nproc="sysctl -n hw.logicalcpu"
 fi
 
