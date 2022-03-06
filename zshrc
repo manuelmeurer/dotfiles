@@ -50,3 +50,5 @@ export MAKE="make --jobs $(nproc)"
 
 # https://unix.stackexchange.com/questions/48577/modifying-the-zsh-shell-word-split
 WORDCHARS=${WORDCHARS//[\.\/\-_]}
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
