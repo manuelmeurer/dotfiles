@@ -1,6 +1,6 @@
 [user]
-  email = manuel@krautcomputing.com
-  name  = Manuel Meurer
+  name       = Manuel Meurer
+  email      = manuel@meurer.io
   signingkey = 2806A868
 [alias]
   s    = show
