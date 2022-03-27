@@ -1,7 +1,6 @@
 [user]
-  name       = Manuel Meurer
-  email      = manuel@meurer.io
-  signingkey = 2806A868
+  name = Manuel Meurer
+  email = manuel@meurer.io
 [alias]
   s    = show
   sh   = stash -u
