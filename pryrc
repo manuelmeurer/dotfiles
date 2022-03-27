@@ -1,7 +1,7 @@
 begin
   require 'amazing_print'
-rescue LoadError => e
-  warn "Couldn't load amazing_print: #{e}"
+rescue LoadError => error
+  warn "Couldn't load amazing_print: #{error}"
 else
   Pry.config.print = ->(output, value, _) do
     output.puts value.ai
@@ -10,9 +10,7 @@ else
 end
 
 Pry.config.prompt_name = if defined?(Rails)
-  app_class = Rails.application.class
-  # DEPRECATION WARNING: `Module#parent_name` has been renamed to `module_parent_name`. `parent_name` is deprecated and will be removed in Rails 6.1.
-  app_name = app_class.respond_to?(:module_parent_name) ? app_class.module_parent_name : app_class.parent_name
+  app_name = Rails.application.class.module_parent_name
   case Rails.env
   when 'development'
     Pry::Helpers::Text.green("#{app_name} DEV")
@@ -55,4 +53,6 @@ Pry.config.exception_handler = ->(output, exception, _pry_) do
   output.puts
 end
 
-extend Rails::ConsoleMethods if defined?(Rails::ConsoleMethods) && Rails.env.present?
+if defined?(Rails::ConsoleMethods) && Rails.env.present?
+  extend Rails::ConsoleMethods
+end
