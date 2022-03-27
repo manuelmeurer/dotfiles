@@ -4,8 +4,10 @@
   signingkey = 2806A868
 [alias]
   s    = show
-  sh   = stash
+  sh   = stash -u
   sp   = stash pop
+  ss   = stash show -p
+  sd   = stash drop
   a    = add
   ap   = add --patch
   b    = branch
