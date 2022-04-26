@@ -88,5 +88,3 @@
   defaultBranch = main
 [http]
   postBuffer = 524288000
-[gpg]
-  program = /usr/local/bin/gpg
