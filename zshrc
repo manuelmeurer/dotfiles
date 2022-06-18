@@ -16,7 +16,7 @@ if type brew > /dev/null; then
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 fi
 if type rbenv > /dev/null; then
-  eval "$(rbenv init -)"
+  eval "$(rbenv init - zsh)"
 fi
 if type scmpuff > /dev/null; then
   eval "$(scmpuff init -s)"
