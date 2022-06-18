@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-[ -f $HOME/.fig ] && source $HOME/.fig/shell/bash_profile.pre.bash
+[ -d $HOME/.fig ] && source $HOME/.fig/shell/bash_profile.pre.bash
 
 export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
@@ -16,4 +16,4 @@ if [ -f "$HOME/.bashrc" ]; then
 fi
 
 # Fig pre block. Keep at the top of this file.
-[ -f $HOME/.fig ] && source $HOME/.fig/shell/bash_profile.post.bash
+[ -d $HOME/.fig ] && source $HOME/.fig/shell/bash_profile.post.bash

@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-[ -f $HOME/.fig ] && source $HOME/.fig/shell/bashrc.pre.bash
+[ -d $HOME/.fig ] && source $HOME/.fig/shell/bashrc.pre.bash
 
 if hash code 2>/dev/null; then
   export EDITOR="code"
@@ -20,7 +20,7 @@ fi
 [ -f $HOME/.bash_prompt ] && source $HOME/.bash_prompt
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
-if [ -f $HOME/.asdf ]; then
+if [ -d $HOME/.asdf ]; then
   source $HOME/.asdf/asdf.sh
   source $HOME/.asdf/completions/asdf.bash
 fi
@@ -40,4 +40,4 @@ fi
 export MAKE="make --jobs $(nproc)"
 
 # Fig post block. Keep at the bottom of this file.
-[ -f $HOME/.fig ] && source $HOME/.fig/shell/bashrc.post.bash
+[ -d $HOME/.fig ] && source $HOME/.fig/shell/bashrc.post.bash
