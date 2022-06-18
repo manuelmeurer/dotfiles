@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+[ -f $HOME/.fig ] && source $HOME/.fig/shell/zshrc.pre.zsh
+
 if type code > /dev/null; then
   export EDITOR="code"
 else
@@ -52,3 +55,5 @@ export MAKE="make --jobs $(nproc)"
 WORDCHARS=${WORDCHARS//[\.\/\-_]}
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# Fig post block. Keep at the bottom of this file.
+[ -f $HOME/.fig ] && source $HOME/.fig/shell/zshrc.post.zsh
