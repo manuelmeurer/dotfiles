@@ -12,7 +12,7 @@ export RUBYMOTION_ANDROID_SDK=~/Library/Android/sdk
 export RUBYMOTION_ANDROID_NDK=~/Library/Android/ndk
 
 if [ -f "$HOME/.bashrc" ]; then
-  . $HOME/.bashrc
+  source $HOME/.bashrc
 fi
 
 # Fig pre block. Keep at the top of this file.
