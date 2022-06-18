@@ -20,6 +20,11 @@ fi
 [ -f $HOME/.bash_prompt ] && source $HOME/.bash_prompt
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
+if [ -f $HOME/.asdf ]; then
+  source $HOME/.asdf/asdf.sh
+  source $HOME/.asdf/completions/asdf.bash
+fi
+
 # Make git completion work when `git` is aliased to `g`
 # http://askubuntu.com/a/62098/63773
 complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null || complete -o default -o nospace -F _git g
