@@ -7,8 +7,7 @@ else
   export EDITOR="vim"
 fi
 
-export GOPATH=$HOME/go
-export PATH="/usr/local/sbin:$GOPATH/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # https://github.com/rails/spring/issues/606
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
@@ -54,6 +53,5 @@ export MAKE="make --jobs $(nproc)"
 # https://unix.stackexchange.com/questions/48577/modifying-the-zsh-shell-word-split
 WORDCHARS=${WORDCHARS//[\.\/\-_]}
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Fig post block. Keep at the bottom of this file.
 [ -f $HOME/.fig ] && source $HOME/.fig/shell/zshrc.post.zsh
