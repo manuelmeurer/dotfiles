@@ -1,4 +1,6 @@
 # Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+# Fig pre block. Keep at the top of this file.
 [ -d $HOME/.fig ] && source $HOME/.fig/shell/zshrc.pre.zsh
 
 if type code > /dev/null; then
@@ -55,3 +57,6 @@ WORDCHARS=${WORDCHARS//[\.\/\-_]}
 
 # Fig post block. Keep at the bottom of this file.
 [ -d $HOME/.fig ] && source $HOME/.fig/shell/zshrc.post.zsh
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
