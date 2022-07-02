@@ -56,7 +56,3 @@ end
 if defined?(Rails::ConsoleMethods) && Rails.env.present?
   extend Rails::ConsoleMethods
 end
-
-if ENV["RENDER"] && cache_folder = ENV["XDG_CACHE_HOME"]
-  Pry.config.history_file = File.join(cache_folder, "pry_history")
-end
