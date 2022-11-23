@@ -9,7 +9,7 @@ else
   export EDITOR="vim"
 fi
 
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@16/bin:/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
 
 # https://github.com/rails/spring/issues/606
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
