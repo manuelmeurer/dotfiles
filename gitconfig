@@ -32,7 +32,7 @@
   rc   = rebase --continue
   rs   = rebase --skip
   ra   = rebase --abort
-  ri   = rebase --interactive head~10
+  ri   = rebase --interactive head~30
   rh   = reset head
   l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short
   ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short --numstat
