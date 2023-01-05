@@ -55,6 +55,9 @@ export MAKE="make --jobs $(nproc)"
 # https://unix.stackexchange.com/questions/48577/modifying-the-zsh-shell-word-split
 WORDCHARS=${WORDCHARS//[\.\/\-_]}
 
+# https://twitter.com/rockatanescu/status/1609518828882628609
+RUBY_YJIT_ENABLE=1
+
 # Fig post block. Keep at the bottom of this file.
 [ -d $HOME/.fig ] && source $HOME/.fig/shell/zshrc.post.zsh
 

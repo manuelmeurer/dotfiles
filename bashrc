@@ -41,6 +41,9 @@ fi
 # https://build.betterup.com/one-weird-trick-that-will-speed-up-your-bundle-install/
 export MAKE="make --jobs $(nproc)"
 
+# https://twitter.com/rockatanescu/status/1609518828882628609
+RUBY_YJIT_ENABLE=1
+
 # Fig post block. Keep at the bottom of this file.
 [ -d $HOME/.fig ] && source $HOME/.fig/shell/bashrc.post.bash
 
