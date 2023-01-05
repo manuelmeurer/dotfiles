@@ -1,5 +1,6 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/bashrc.pre.bash" ]] && builtin source "$HOME/.fig/shell/bashrc.pre.bash"
+
 # Fig pre block. Keep at the top of this file.
 [ -d $HOME/.fig ] && source $HOME/.fig/shell/bashrc.pre.bash
 
