@@ -29,3 +29,7 @@ public/packs-test/*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+app/assets/builds
+storage
+/db/**/*.sqlite3
+/db/**/*.sqlite3-*
