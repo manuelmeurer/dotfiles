@@ -56,6 +56,12 @@ WORDCHARS=${WORDCHARS//[\.\/\-_]}
 # https://twitter.com/rockatanescu/status/1609518828882628609
 RUBY_YJIT_ENABLE=1
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+# bun completions
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
