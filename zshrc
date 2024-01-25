@@ -1,9 +1,6 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
-# Fig pre block. Keep at the top of this file.
-[ -d $HOME/.fig ] && source $HOME/.fig/shell/zshrc.pre.zsh
-
 if type code > /dev/null; then
   export EDITOR="code"
 else
@@ -59,8 +56,6 @@ WORDCHARS=${WORDCHARS//[\.\/\-_]}
 # https://twitter.com/rockatanescu/status/1609518828882628609
 RUBY_YJIT_ENABLE=1
 
-# Fig post block. Keep at the bottom of this file.
-[ -d $HOME/.fig ] && source $HOME/.fig/shell/zshrc.post.zsh
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
