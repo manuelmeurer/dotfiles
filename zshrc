@@ -7,10 +7,7 @@ else
   export EDITOR="vim"
 fi
 
-export PATH="/opt/homebrew/opt/node@16/bin:/opt/homebrew/opt/python@3.10/libexec/bin:$PATH"
-
-# https://github.com/rails/spring/issues/606
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 
 if type brew > /dev/null; then
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
