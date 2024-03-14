@@ -1,5 +1,5 @@
-# Fig pre block. Keep at the top of this file.
-[ -d $HOME/.fig ] && source $HOME/.fig/shell/bash_profile.pre.bash
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/bash_profile.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/bash_profile.pre.bash"
 
 export CLICOLOR="1"
 export LSCOLORS="ExFxCxDxBxegedabagacad"
@@ -31,5 +31,5 @@ _envkey_yargs_completions()
 compdef _envkey_yargs_completions envkey
 ###-end-envkey-completions-###
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/bash_profile.post.bash" ]] && builtin source "$HOME/.fig/shell/bash_profile.post.bash"
+# CodeWhisperer post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/bash_profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/bash_profile.post.bash"
