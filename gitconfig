@@ -61,7 +61,7 @@
   excludesfile = ~/.gitignore
   editor = code --wait
 [push]
-  default = simple
+  default = current
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -71,6 +71,7 @@
   autosquash = true
 [commit]
   gpgsign = true
+  verbose = true
 [status]
   showUntrackedFiles = all
 [transfer]
@@ -78,10 +79,12 @@
 [diff]
   colorMoved = default
   tool = default-difftool
+  algorithm = histogram
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [fetch]
   fsckobjects = false
+  showForcedUpdates = true
 [submodule]
   recurse = true
 [init]
@@ -92,3 +95,5 @@
   repo = /Users/manuel/code/uplink/app
 [maintenance]
   repo = /Users/manuel/code/uplink/app
+[help]
+  autocorrect = prompt
