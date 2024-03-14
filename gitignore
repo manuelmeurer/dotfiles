@@ -33,3 +33,4 @@ app/assets/builds
 storage
 /db/**/*.sqlite3
 /db/**/*.sqlite3-*
+spec/examples.txt
