@@ -56,3 +56,11 @@ end
 if defined?(Rails::ConsoleMethods) && Rails.env.present?
   extend Rails::ConsoleMethods
 end
+
+class ActiveRecord::Base
+  def self./(id)
+    respond_to?(:friendly) ?
+      friendly.find(id) :
+      find(id)
+  end
+end
