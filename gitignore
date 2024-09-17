@@ -34,3 +34,4 @@ storage
 /db/**/*.sqlite3
 /db/**/*.sqlite3-*
 spec/examples.txt
+config/master.key
