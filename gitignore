@@ -4,10 +4,6 @@
 *.code-workspace
 .bundle
 .DS_Store
-.env
-.env.development
-.env.production
-.env.test
 .sass-cache
 config/deploy/infrastructure
 database.yml
@@ -35,3 +31,4 @@ storage
 /db/**/*.sqlite3-*
 spec/examples.txt
 config/master.key
+.env.keys
