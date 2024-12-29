@@ -53,10 +53,6 @@ Pry.config.exception_handler = ->(output, exception, _pry_) do
   output.puts
 end
 
-if defined?(Rails::ConsoleMethods) && Rails.env.present?
-  extend Rails::ConsoleMethods
-end
-
 class ActiveRecord::Base
   def self./(id)
     respond_to?(:friendly) ?
