@@ -53,10 +53,12 @@ Pry.config.exception_handler = ->(output, exception, _pry_) do
   output.puts
 end
 
-class ActiveRecord::Base
-  def self./(id)
-    respond_to?(:friendly) ?
-      friendly.find(id) :
-      find(id)
+if defined?(ActiveRecord::Base)
+  class ActiveRecord::Base
+    def self./(id)
+      respond_to?(:friendly) ?
+        friendly.find(id) :
+        find(id)
+    end
   end
 end
