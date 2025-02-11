@@ -4,7 +4,7 @@ else
   export EDITOR="vim"
 fi
 
-export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+export PATH="/opt/homebrew/opt/sqlite/bin:/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 if type brew > /dev/null; then
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
