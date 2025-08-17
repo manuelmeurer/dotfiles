@@ -19,7 +19,7 @@ alias rdmr="bin/rails db:migrate:redo --trace"
 alias rdtl="bin/rails db:test:load_structure --trace"
 alias rds="bin/rails db:seed --trace"
 alias rdd="bin/rails db:drop --trace"
-alias rdr="bin/rails db:rollback --trace"
+alias rdr="bin/rails db:rollback:primary --trace"
 alias rr="bin/rails routes --trace"
 alias rrg="bin/rails routes --trace | grep"
 
