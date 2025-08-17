@@ -32,7 +32,14 @@
   rc   = rebase --continue
   rs   = rebase --skip
   ra   = rebase --abort
-  ri   = rebase --interactive head~30
+  ri   = "!f() { \
+           COMMIT_COUNT=$(git rev-list --count HEAD); \
+           if [ \"$COMMIT_COUNT\" -gt 30 ]; then \
+             git rebase -i HEAD~30; \
+           else \
+             git rebase -i --root; \
+           fi; \
+         }; f"
   rh   = reset head
   l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short
   ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short --numstat
