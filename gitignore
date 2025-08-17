@@ -5,7 +5,7 @@
 .bundle
 .DS_Store
 .sass-cache
-config/deploy/infrastructure
+.claude/settings.local.json
 database.yml
 log/*
 node_modules
