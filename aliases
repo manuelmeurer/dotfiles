@@ -48,7 +48,7 @@ alias prodtail="tail -f log/production.log"
 alias pumatail="tail -f ~/Library/Logs/puma-dev.log"
 
 alias ttr="touch tmp/restart.txt"
-alias ap="ansible-playbook"
+alias bub="bundle update baseline && git add Gemfile.lock && git commit -m 'update baseline'"
 
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
