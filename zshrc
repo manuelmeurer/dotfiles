@@ -19,6 +19,7 @@ fi
 [ -f $HOME/.aliases ] && source $HOME/.aliases
 [ -f $HOME/.git-prompt.sh ] && source $HOME/.git-prompt.sh
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && source /opt/homebrew/etc/profile.d/autojump.sh
 
 zstyle ':completion:*' special-dirs true
 
