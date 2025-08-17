@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bin/rails:*)",
+      "Bash(bundle:*)",
+      "Bash(chmod:*)",
+      "Bash(find:*)",
+      "Bash(gh auth:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(ruby:*)"
+    ],
+    "deny": []
+  }
+}
