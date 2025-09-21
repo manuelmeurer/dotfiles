@@ -40,6 +40,12 @@
              git rebase -i --root; \
            fi; \
          }; f"
+  fu   = "!f() { \
+           target=$1; \
+           shift; \
+           git commit --fixup=$target \"$@\" && \
+           git rebase --autosquash ${target}^; \
+         }; f"
   rh   = reset head
   l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short
   ll   = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short --numstat
