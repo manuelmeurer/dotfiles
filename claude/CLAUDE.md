@@ -78,6 +78,14 @@ Break complex work into 3-5 stages. Document in `IMPLEMENTATION_PLAN.md`:
   - Self-review changes
   - Ensure commit message explains "why"
 
+### Code Style
+
+#### Ruby
+- **Prefer double quotes over single quotes** for strings. Use single quotes only when necessary:
+  - When the string contains double quotes: `'He said "hello"'`
+  - In shell commands with interpolation: `system('echo "#{variable}"')`
+  - When following existing code patterns that heavily use single quotes
+
 ### Error Handling
 
 - Fail fast with descriptive messages
