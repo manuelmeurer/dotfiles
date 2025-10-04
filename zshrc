@@ -4,7 +4,13 @@ else
   export EDITOR="vim"
 fi
 
-export PATH="/opt/homebrew/opt/sqlite/bin:/opt/homebrew/opt/postgresql@17/bin:$PATH"
+for bin_path in "/opt/homebrew/opt/sqlite/bin" "/opt/homebrew/opt/postgresql@17/bin" "/Users/manuel/.local/bin"; do
+  if [ -d "$bin_path" ]; then
+    export PATH="$bin_path:$PATH"
+  else
+    echo "Warning: $bin_path does not exist, skipping"
+  fi
+done
 
 if type brew > /dev/null; then
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
