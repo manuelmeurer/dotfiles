@@ -43,8 +43,13 @@
   fu   = "!f() { \
            target=$1; \
            shift; \
+           stash_name=\"fu-autostash\"; \
            git commit --fixup=$target \"$@\" && \
-           git rebase --autosquash ${target}^; \
+           git stash push -m \"$stash_name\" && \
+           git rebase --autosquash ${target}^ && \
+           if git stash list | head -1 | grep -q \"$stash_name\"; then \
+             git stash pop; \
+           fi; \
          }; f"
   rh   = reset head
   l    = log --pretty=format:\"%C(yellow)%h %C(blue)<%ad> %C(reset)%s%C(green) [%cn]%C(auto)%d\" --graph --decorate --date=short
