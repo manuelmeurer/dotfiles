@@ -12,6 +12,8 @@
       "Bash(grep:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
       "Bash(ruby:*)",
       "mcp__ide__executeCode",
       "mcp__playwright__browser_evaluate",
