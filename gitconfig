@@ -17,6 +17,7 @@
   cam  = commit -am
   cmm  = commit --amend --reuse-message=HEAD
   camm = commit -a --amend --reuse-message=HEAD
+  rw   = commit --amend
   co   = checkout
   p    = push
   po   = !bash -c 'git push origin `git rev-parse --abbrev-ref HEAD` -u' -
