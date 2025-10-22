@@ -13,8 +13,8 @@
   ba   = branch -a
   st   = status -sb --ahead-behind
   c    = commit
-  cm   = commit -m
-  cam  = commit -am
+  cm   = "!f() { git commit -m \"$*\"; }; f"
+  cam  = "!f() { git commit -am \"$*\"; }; f"
   cmm  = commit --amend --reuse-message=HEAD
   camm = commit -a --amend --reuse-message=HEAD
   rw   = commit --amend
