@@ -14,7 +14,6 @@
 - Single responsibility per function/class
 - Avoid premature abstractions
 - No clever tricks - choose the boring solution
-- If you need to explain it, it's too complex
 
 ## Process
 
@@ -29,6 +28,7 @@ Break complex work into 3-5 stages. Document in `IMPLEMENTATION_PLAN.md`:
 **Tests**: [Specific test cases]
 **Status**: [Not Started|In Progress|Complete]
 ```
+
 - Update status as you progress
 - Remove file when all stages are done
 
@@ -81,10 +81,75 @@ Break complex work into 3-5 stages. Document in `IMPLEMENTATION_PLAN.md`:
 ### Code Style
 
 #### Ruby
+
 - **Prefer double quotes over single quotes** for strings. Use single quotes only when necessary:
   - When the string contains double quotes: `'He said "hello"'`
   - In shell commands with interpolation: `system('echo "#{variable}"')`
   - When following existing code patterns that heavily use single quotes
+
+- **Use parallel assignment for instance variables** when initializing two or more instance variables from local variables with matching or similar names (common in `initialize` methods):
+
+  ```ruby
+  # Good - parallel assignment
+  def initialize(foo, bar)
+    @foo, @bar = foo, bar
+  end
+
+  # Avoid - separate assignments
+  def initialize(foo, bar)
+    @foo = foo
+    @bar = bar
+  end
+  ```
+
+  When assigning three or more variables, split across two lines with values on the second line:
+
+  ```ruby
+  # Good - split across two lines for 3+ variables
+  def initialize(foo, bar, baz)
+    @foo, @bar, @baz =
+      foo, bar, baz
+  end
+
+  # Avoid - all on one line
+  def initialize(foo, bar, baz)
+    @foo, @bar, @baz = foo, bar, baz
+  end
+  ```
+
+- **Indent private methods** by adding 2 additional spaces of indentation to all methods defined after the `private` keyword:
+
+  ```ruby
+  # Good - private methods are indented
+  class Example
+    def public_method
+      # code
+    end
+
+    private
+
+      def private_method
+        # code
+      end
+
+      def another_private_method
+        # code
+      end
+  end
+
+  # Avoid - private methods at same indentation level
+  class Example
+    def public_method
+      # code
+    end
+
+    private
+
+    def private_method
+      # code
+    end
+  end
+  ```
 
 ### Error Handling
 
