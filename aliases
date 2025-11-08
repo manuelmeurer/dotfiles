@@ -1,22 +1,13 @@
 alias ls="ls -lah"
-alias st="subl"
-
-alias ss="script/server"
-alias sc="script/console"
-alias sg="script/generate"
-alias sp="script/plugin"
-alias sr="script/runner"
 
 alias rs="bin/rails server"
 alias rc="bin/rails console"
 alias rg="bin/rails generate"
 alias rgm="bin/rails generate migration"
-alias rpi="bin/rails plugin install"
 
 alias rdc="bin/rails db:create --trace"
 alias rdm="bin/rails db:migrate --trace"
 alias rdmr="bin/rails db:migrate:redo --trace"
-alias rdtl="bin/rails db:test:load_structure --trace"
 alias rds="bin/rails db:seed --trace"
 alias rdd="bin/rails db:drop --trace"
 alias rdr="bin/rails db:rollback:primary --trace"
@@ -30,12 +21,6 @@ alias gop="gem open"
 alias gcl="gem cleanup"
 alias gbtr="gem bump --tag --release"
 
-alias sgi="sudo gem install"
-alias sgu="sudo gem uninstall"
-alias sgcl="sudo gem cleanup"
-
-alias sai="sudo apt-get install"
-
 alias bi="bundle install"
 alias be="bundle exec"
 alias bu="bundle update"
@@ -45,7 +30,6 @@ alias blg="bundle list | grep"
 alias devtail="tail -f log/development.log"
 alias testtail="tail -f log/test.log"
 alias prodtail="tail -f log/production.log"
-alias pumatail="tail -f ~/Library/Logs/puma-dev.log"
 
 alias ttr="touch tmp/restart.txt"
 alias bub="bundle update baseline && git add Gemfile.lock && git commit -m 'update baseline'"
@@ -62,14 +46,7 @@ function ghpr() {
   open https://github.com/$repo/compare/$branch;
 }
 
-# Check if hub is installed and, if so, alias to git
-command -v hub >/dev/null 2>&1 && alias git=hub
-
 alias g="git"
-alias h="heroku"
-
-alias mb="bundle exec middleman build"
-alias ms="bundle exec middleman server"
 
 function fname() { find . -iname "*$@*"; }
 function psg() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
