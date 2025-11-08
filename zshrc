@@ -1,3 +1,6 @@
+# Return early if not running interactively.
+[[ -o interactive ]] || return
+
 if type code > /dev/null; then
   export EDITOR="code"
 else
@@ -33,6 +36,9 @@ zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
+# Share history across all sessions immediately
+setopt SHARE_HISTORY
+
 setopt interactivecomments
 
 setopt PROMPT_SUBST
@@ -57,7 +63,7 @@ WORDCHARS=${WORDCHARS//[\.\/\-_]}
 # https://twitter.com/rockatanescu/status/1609518828882628609
 RUBY_YJIT_ENABLE=1
 
-# NVM installed via Homebrew
+# nvm installed via Homebrew
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
