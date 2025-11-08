@@ -23,3 +23,6 @@ settings.yml
 spec/examples.txt
 storage
 tmp/**/*
+spec/dummy/log/*
+spec/dummy/tmp/**/*
+spec/dummy/app/assets/builds
