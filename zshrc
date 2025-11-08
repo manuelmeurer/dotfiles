@@ -1,6 +1,3 @@
-# Return early if not running interactively.
-[[ -o interactive ]] || return
-
 if type code > /dev/null; then
   export EDITOR="code"
 else

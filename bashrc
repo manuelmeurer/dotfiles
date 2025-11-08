@@ -1,9 +1,3 @@
-# Return early if not running interactively.
-case $- in
-  *i*) ;;
-    *) return;;
-esac
-
 if hash code 2>/dev/null; then
   export EDITOR="code"
 else
