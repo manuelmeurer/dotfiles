@@ -18,15 +18,12 @@ for file in \
   "$HOME/.git-prompt.sh" \
   "$HOME/.bash_prompt" \
   "$HOME/.fzf.bash" \
-  "$HOME/.asdf/asdf.sh"; do
+  "$HOME/.asdf/asdf.sh" \
+  "$HOME/.asdf/completions/asdf.bash"; do
+
   [ -f "$file" ] && source "$file"
 done
 unset file
-
-if [ -d $HOME/.asdf ]; then
-  source $HOME/.asdf/asdf.sh
-  source $HOME/.asdf/completions/asdf.bash
-fi
 
 # Make git completion work when `git` is aliased to `g`
 # http://askubuntu.com/a/62098/63773
