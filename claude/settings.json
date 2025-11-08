@@ -25,6 +25,7 @@
       "mcp__playwright__browser_navigate",
       "mcp__playwright__browser_snapshot",
       "mcp__playwright__browser_wait_for",
+      "Read(//Users/manuel/.claude/**)",
       "Read(//Users/manuel/code/baseline/**)",
       "Read(//Users/manuel/Library/Application Support/Code/User/**)",
       "WebFetch",
