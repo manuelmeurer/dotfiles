@@ -1,9 +1,13 @@
 #!/usr/bin/env ruby
 
+require "fileutils"
+
 def process(dir)
+  same_dir = dir == __dir__
+
   Dir.children(dir).each do |file|
     next if
-      (dir == __dir__ && file == File.basename(__FILE__)) ||
+      (same_dir && file == File.basename(__FILE__)) ||
       file.end_with?(".code-workspace") ||
       file[0] == "."
 
@@ -13,7 +17,7 @@ def process(dir)
     end
 
     target_file =
-      dir == __dir__ ?
+      same_dir ?
         file :
         dir
           .delete_prefix(__dir__)
@@ -21,6 +25,10 @@ def process(dir)
           .then { File.join _1, file }
 
     target = File.join(ENV["HOME"], ".#{target_file}")
+
+    unless same_dir
+      FileUtils.mkdir_p(File.dirname(target))
+    end
 
     next if File.exist?(target)
 
