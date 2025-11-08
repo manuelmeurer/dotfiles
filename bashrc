@@ -1,3 +1,9 @@
+# Return early if not running interactively.
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
 if hash code 2>/dev/null; then
   export EDITOR="code"
 else
@@ -11,11 +17,17 @@ if hash scmpuff 2>/dev/null; then
   eval "$(scmpuff init -s)"
 fi
 
-[ -f $HOME/.git-completion.bash ] && source $HOME/.git-completion.bash
-[ -f $HOME/.aliases ] && source $HOME/.aliases
-[ -f $HOME/.git-prompt.sh ] && source $HOME/.git-prompt.sh
-[ -f $HOME/.bash_prompt ] && source $HOME/.bash_prompt
-[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
+# Source configuration files if they exist
+for file in \
+  "$HOME/.git-completion.bash" \
+  "$HOME/.aliases" \
+  "$HOME/.git-prompt.sh" \
+  "$HOME/.bash_prompt" \
+  "$HOME/.fzf.bash" \
+  "$HOME/.asdf/asdf.sh"; do
+  [ -f "$file" ] && source "$file"
+done
+unset file
 
 if [ -d $HOME/.asdf ]; then
   source $HOME/.asdf/asdf.sh
@@ -38,3 +50,21 @@ export MAKE="make --jobs $(nproc)"
 
 # https://twitter.com/rockatanescu/status/1609518828882628609
 RUBY_YJIT_ENABLE=1
+
+# Don't add duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+
+# Keep more history in memory and file.
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# Append to the history file, don't overwrite it.
+shopt -s histappend
+
+# Check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Make "**" in a pathname expansion context match all files
+# and zero or more directories and subdirectories.
+shopt -s globstar
