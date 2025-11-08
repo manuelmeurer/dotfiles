@@ -1,4 +1,8 @@
-alias ls="ls -lah"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias ls="ls -lah -G"
+else
+  alias ls="ls -lah --color=auto"
+fi
 
 alias rs="bin/rails server"
 alias rc="bin/rails console"
