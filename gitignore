@@ -26,3 +26,4 @@ tmp/**/*
 spec/dummy/log/*
 spec/dummy/tmp/**/*
 spec/dummy/app/assets/builds
+spec/dummy/public/assets
