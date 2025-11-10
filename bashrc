@@ -42,8 +42,8 @@ export MAKE="make --jobs $(nproc)"
 # https://twitter.com/rockatanescu/status/1609518828882628609
 RUBY_YJIT_ENABLE=1
 
-# Don't add duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
+# Don't add duplicate lines in the history.
+HISTCONTROL=ignoredups
 
 # Keep more history in memory and file.
 HISTSIZE=1000

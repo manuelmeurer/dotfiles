@@ -33,8 +33,11 @@ zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
-# Share history across all sessions immediately
+# Share history across all sessions immediately.
 setopt SHARE_HISTORY
+
+# Don't store duplicate entries in the history.
+setopt HIST_IGNORE_DUPS
 
 setopt interactivecomments
 
