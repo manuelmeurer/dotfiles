@@ -10,6 +10,9 @@ fi
 if hash scmpuff 2>/dev/null; then
   eval "$(scmpuff init -s)"
 fi
+if hash fzf 2>/dev/null; then
+  eval "$(fzf --bash)"
+fi
 
 # Source configuration files if they exist
 for file in \
@@ -17,7 +20,6 @@ for file in \
   "$HOME/.aliases" \
   "$HOME/.git-prompt.sh" \
   "$HOME/.bash_prompt" \
-  "$HOME/.fzf.bash" \
   "$HOME/.asdf/asdf.sh" \
   "$HOME/.asdf/completions/asdf.bash"; do
 
