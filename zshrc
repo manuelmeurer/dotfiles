@@ -4,7 +4,11 @@ else
   export EDITOR="vim"
 fi
 
-for bin_path in "/opt/homebrew/opt/sqlite/bin" "/opt/homebrew/opt/postgresql@17/bin" "/Users/manuel/.local/bin"; do
+for bin_path in \
+  "/opt/homebrew/opt/sqlite/bin" \
+  "/opt/homebrew/opt/postgresql@18/bin" \
+  "/Users/manuel/.local/bin"; do
+
   if [ -d "$bin_path" ]; then
     export PATH="$bin_path:$PATH"
   else
