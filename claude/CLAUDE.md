@@ -184,6 +184,26 @@ When multiple valid approaches exist, choose based on:
 - Use project's formatter/linter settings
 - Don't introduce new tools without strong justification
 
+#### Rails Projects
+
+When running Rails executables, **always check for binstubs first**:
+
+1. **Check for binstub**: Look for `bin/rails`, `bin/rspec`, `bin/rubocop`, etc.
+2. **Use binstub if exists**: Run `bin/rails` instead of `bundle exec rails`
+3. **Fallback to bundle exec**: Only use `bundle exec` if no binstub exists
+
+```bash
+# Good - check for binstub first
+bin/rails db:migrate
+bin/rspec spec/models/user_spec.rb
+
+# Only if binstubs don't exist
+bundle exec rails db:migrate
+bundle exec rspec spec/models/user_spec.rb
+```
+
+**When bundle exec fails**: Inform the user that a binstub might resolve the issue, as binstubs can have different load paths or configurations.
+
 ## Quality Gates
 
 ### Definition of Done
