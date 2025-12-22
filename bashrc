@@ -38,9 +38,6 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   alias nproc="sysctl -n hw.logicalcpu"
 fi
 
-# https://build.betterup.com/one-weird-trick-that-will-speed-up-your-bundle-install/
-export MAKE="make --jobs $(nproc)"
-
 # https://twitter.com/rockatanescu/status/1609518828882628609
 RUBY_YJIT_ENABLE=1
 

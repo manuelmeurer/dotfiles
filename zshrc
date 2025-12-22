@@ -60,9 +60,6 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   alias nproc="sysctl -n hw.logicalcpu"
 fi
 
-# https://build.betterup.com/one-weird-trick-that-will-speed-up-your-bundle-install/
-export MAKE="make --jobs $(nproc)"
-
 # https://unix.stackexchange.com/questions/48577/modifying-the-zsh-shell-word-split
 WORDCHARS=${WORDCHARS//[\.\/\-_]}
 
