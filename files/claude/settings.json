@@ -1,5 +1,6 @@
 {
   "cleanupPeriodDays": 99999,
+  "model": "opus",
   "permissions": {
     "allow": [
       "Bash(bin/rails:*)",
@@ -38,6 +39,5 @@
       "WebSearch"
     ],
     "deny": []
-  },
-  "model": "opus"
+  }
 }
