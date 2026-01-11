@@ -30,7 +30,7 @@
   di   = diff
   dic  = diff --cached
   re   = rebase
-  rc   = rebase --continue
+  rc   = "!GIT_EDITOR=true git rebase --continue"
   rs   = rebase --skip
   ra   = rebase --abort
   ri   = "!f() { \
