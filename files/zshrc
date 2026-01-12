@@ -39,8 +39,18 @@ zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
+# Keep more history in memory and file.
+HISTSIZE=10000
+SAVEHIST=$HISTSIZE
+
 # Share history across all sessions immediately.
 setopt SHARE_HISTORY
+
+# Add timestamps to history entries.
+setopt EXTENDED_HISTORY
+
+# Allow bare directory names to change directories automatically.
+setopt autocd
 
 # Don't store duplicate entries in the history.
 setopt HIST_IGNORE_DUPS

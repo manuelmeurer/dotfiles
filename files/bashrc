@@ -45,8 +45,8 @@ RUBY_YJIT_ENABLE=1
 HISTCONTROL=ignoredups
 
 # Keep more history in memory and file.
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=$HISTSIZE
 
 # Append to the history file, don't overwrite it.
 shopt -s histappend
