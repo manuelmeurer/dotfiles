@@ -1,6 +1,5 @@
 {
   "cleanupPeriodDays": 99999,
-  "model": "opus",
   "permissions": {
     "allow": [
       "Bash(bin/rails:*)",
@@ -27,17 +26,23 @@
       "Bash(tree:*)",
       "Bash(while read file)",
       "Bash(xargs:*)",
+      "mcp__context7__resolve-library-id",
       "mcp__ide__executeCode",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_close",
       "mcp__playwright__browser_evaluate",
       "mcp__playwright__browser_navigate",
       "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_take_screenshot",
       "mcp__playwright__browser_wait_for",
       "Read(//Users/manuel/.claude/**)",
-      "Read(//Users/manuel/code/baseline/**)",
+      "Read(//Users/manuel/.rbenv/**)",
+      "Read(//Users/manuel/code/**)",
       "Read(//Users/manuel/Library/Application Support/Code/User/**)",
       "WebFetch",
-      "WebSearch"
+      "WebSearch",
     ],
     "deny": []
-  }
+  },
+  "model": "opus"
 }
