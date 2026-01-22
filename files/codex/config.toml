@@ -14,9 +14,16 @@ skills = true
 unified_exec = true
 web_search_request = true
 
-[projects."/Users/steipete/Projects"]
+[projects."/Users/manuel/code/own"]
 trust_level = "trusted"
 
 [mcp_servers.context7]
 command = "npx"
 args = ["-y", "@upstash/context7-mcp", "--api-key", "ctx7sk-0eca33bf-e0b6-43ae-b888-07d00df18608"]
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]
+
+[mcp_servers.figma_desktop]
+url = "http://127.0.0.1:3845/mcp"
