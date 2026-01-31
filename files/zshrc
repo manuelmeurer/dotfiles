@@ -22,6 +22,9 @@ fi
 if type rbenv > /dev/null; then
   eval "$(rbenv init - zsh)"
 fi
+if type mise > /dev/null; then
+  eval "$(mise activate zsh)"
+fi
 if type scmpuff > /dev/null; then
   eval "$(scmpuff init -s)"
 fi
