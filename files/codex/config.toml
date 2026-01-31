@@ -27,3 +27,7 @@ args = ["@playwright/mcp@latest"]
 
 [mcp_servers.figma_desktop]
 url = "http://127.0.0.1:3845/mcp"
+
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["chrome-devtools-mcp@latest"]
