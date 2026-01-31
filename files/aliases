@@ -4,6 +4,8 @@ else
   alias ls="ls -lah --color=auto"
 fi
 
+alias rm="trash"
+
 alias rs="bin/rails server"
 alias rc="bin/rails console"
 alias rgm="bin/rails generate migration"
