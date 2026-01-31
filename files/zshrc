@@ -37,9 +37,6 @@ fi
 if [ -f $HOME/.git-prompt.sh ]; then
   source $HOME/.git-prompt.sh
 fi
-if [ -f /opt/homebrew/etc/profile.d/autojump.sh ]; then
-  source /opt/homebrew/etc/profile.d/autojump.sh
-fi
 
 zstyle ':completion:*' special-dirs true
 
@@ -93,5 +90,10 @@ RUBY_YJIT_ENABLE=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# Must be called after compinit
+if type zoxide > /dev/null; then
+  eval "$(zoxide init zsh)"
+fi
 
 [ -f $HOME/.secret-env-vars ] && source $HOME/.secret-env-vars
