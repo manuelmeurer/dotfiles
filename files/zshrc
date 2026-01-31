@@ -31,6 +31,9 @@ fi
 if type fzf > /dev/null; then
   source <(fzf --zsh)
 fi
+if type openclaw > /dev/null; then
+  source <(openclaw completion --shell zsh)
+fi
 if [ -f $HOME/.aliases ]; then
   source $HOME/.aliases
 fi
