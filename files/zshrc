@@ -13,7 +13,16 @@ path_prepend() {
 path_prepend "/opt/homebrew/opt/sqlite/bin"
 path_prepend "/opt/homebrew/opt/postgresql@18/bin"
 path_prepend "/opt/homebrew/bin"
-path_prepend "/Users/manuel/.local/bin"
+path_prepend "$HOME/.local/bin"
+
+source_if_exists() {
+  if [ -f "$1" ]; then
+    source "$1"
+  fi
+}
+
+source_if_exists "$HOME/.aliases"
+source_if_exists "$HOME/.git-prompt.sh"
 
 if type brew > /dev/null; then
   brew_cmd="brew"
@@ -38,12 +47,6 @@ if type fzf > /dev/null; then
 fi
 if type openclaw > /dev/null; then
   source <(openclaw completion --shell zsh)
-fi
-if [ -f $HOME/.aliases ]; then
-  source $HOME/.aliases
-fi
-if [ -f $HOME/.git-prompt.sh ]; then
-  source $HOME/.git-prompt.sh
 fi
 
 zstyle ':completion:*' special-dirs true
@@ -104,4 +107,4 @@ if type zoxide > /dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-[ -f $HOME/.secret-env-vars ] && source $HOME/.secret-env-vars
+[ -f "$HOME/.secret-env-vars" ] && source "$HOME/.secret-env-vars"
