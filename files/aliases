@@ -4,7 +4,9 @@ else
   alias ls="ls -lah --color=auto"
 fi
 
-alias rm="trash"
+if command -v trash &> /dev/null; then
+  alias rm="trash"
+fi
 
 alias rs="bin/rails server"
 alias rc="bin/rails console"
