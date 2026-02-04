@@ -23,6 +23,7 @@ source_if_exists() {
 
 source_if_exists "$HOME/.aliases"
 source_if_exists "$HOME/.git-prompt.sh"
+source_if_exists "$HOME/.asdf/asdf.sh"
 
 if type brew > /dev/null; then
   brew_cmd="brew"
