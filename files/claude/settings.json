@@ -41,8 +41,8 @@
       "Read(//Users/manuel/Library/Application Support/Code/User/**)",
       "WebFetch",
       "WebSearch",
+      "Bash(trash:*)"
     ],
     "deny": []
-  },
-  "model": "opus"
+  }
 }
