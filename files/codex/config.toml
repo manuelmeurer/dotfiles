@@ -6,6 +6,7 @@ model = "gpt-5.3-codex"
 tool_output_token_limit = 25000
 model_auto_compact_token_limit = 233000
 personality = "pragmatic"
+model_reasoning_effort = "medium"
 
 [features]
 apply_patch_freeform = true
