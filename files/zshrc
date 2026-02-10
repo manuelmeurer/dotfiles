@@ -1,29 +1,11 @@
-if type code > /dev/null; then
-  export EDITOR="code"
-else
-  export EDITOR="vim"
-fi
+source "$HOME/.shell-helpers.sh"
 
-path_prepend() {
-  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
-    export PATH="$1:$PATH"
-  fi
-}
-
-path_prepend "/opt/homebrew/opt/sqlite/bin"
-path_prepend "/opt/homebrew/opt/postgresql@18/bin"
-path_prepend "/opt/homebrew/bin"
-path_prepend "$HOME/.local/bin"
-
-source_if_exists() {
-  if [ -f "$1" ]; then
-    source "$1"
-  fi
-}
+select_editor
+add_common_dirs_to_path
 
 source_if_exists "$HOME/.aliases"
-source_if_exists "$HOME/.git-prompt.sh"
 source_if_exists "$HOME/.asdf/asdf.sh"
+source_if_exists "$HOME/.git-prompt.sh"
 
 if type brew > /dev/null; then
   brew_cmd="brew"
