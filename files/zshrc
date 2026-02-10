@@ -39,6 +39,7 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
 # Keep more history in memory and file.
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 
