@@ -24,6 +24,7 @@
       "Bash(python3:*)",
       "Bash(rm:*)",
       "Bash(ruby:*)",
+      "Bash(trash:*)",
       "Bash(tree:*)",
       "Bash(while read file)",
       "Bash(xargs:*)",
@@ -41,8 +42,7 @@
       "Read(//Users/manuel/code/**)",
       "Read(//Users/manuel/Library/Application Support/Code/User/**)",
       "WebFetch",
-      "WebSearch",
-      "Bash(trash:*)"
+      "WebSearch"
     ],
     "deny": []
   }
