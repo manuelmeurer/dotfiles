@@ -1,6 +1,11 @@
 source "$HOME/.shell-helpers.sh"
 
 select_editor
+
+# Force emacs keybindings. Must come after select_editor because zsh
+# auto-enables vi-mode when EDITOR contains "vi" (e.g. vim, nvim).
+bindkey -e
+
 add_common_dirs_to_path
 
 source_if_exists "$HOME/.aliases"
