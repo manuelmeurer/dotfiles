@@ -10,9 +10,6 @@ source_if_exists "$HOME/.bash_prompt"
 source_if_exists "$HOME/.git-completion.bash"
 source_if_exists "$HOME/.git-prompt.sh"
 
-if hash rbenv 2>/dev/null; then
-  eval "$(rbenv init -)"
-fi
 if hash mise 2>/dev/null; then
   eval "$(mise activate bash)"
 fi
