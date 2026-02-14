@@ -85,11 +85,6 @@ WORDCHARS=${WORDCHARS//[\.\/\-_]}
 # https://twitter.com/rockatanescu/status/1609518828882628609
 RUBY_YJIT_ENABLE=1
 
-# nvm installed via Homebrew
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
 # Must be called after compinit
 if type zoxide > /dev/null; then
   eval "$(zoxide init zsh)"
