@@ -59,7 +59,7 @@ setopt interactivecomments
 
 setopt PROMPT_SUBST
 NEWLINE=$'\n'
-if [[ "$(hostname -s)" == "macbook" ]]; then
+if [[ "${(L)$(hostname -s)}" == *macbook* ]]; then
   HOSTCOLOR="green"
 else
   HOSTCOLOR="magenta"
