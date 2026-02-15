@@ -2,7 +2,7 @@
 .claude/settings.local.json
 .DS_Store
 .env.keys
-.playwright-mcp
+.playwright*
 .sass-cache
 .yarn/*
 *.code-workspace
@@ -20,10 +20,10 @@ public/system
 public/uploads
 secrets.yml
 settings.yml
+spec/dummy/app/assets/builds
+spec/dummy/log/*
+spec/dummy/public/assets
+spec/dummy/tmp/**/*
 spec/examples.txt
 storage
 tmp/**/*
-spec/dummy/log/*
-spec/dummy/tmp/**/*
-spec/dummy/app/assets/builds
-spec/dummy/public/assets
