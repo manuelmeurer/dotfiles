@@ -70,6 +70,10 @@ else
 fi
 PROMPT='${NEWLINE}%F{248}%* %F{$HOSTCOLOR}%n@%m %F{yellow}%~%F{cyan}$(__git_ps1)%f${NEWLINE}❯ '
 
+# Use lighter colors for directories and executables in ls output.
+export LSCOLORS="GxfxcxdxBxegedabagacad"
+export LS_COLORS="di=1;36:ex=1;31"
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export GPG_TTY=`tty`
