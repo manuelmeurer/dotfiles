@@ -27,3 +27,4 @@ spec/dummy/tmp/**/*
 spec/examples.txt
 storage
 tmp/**/*
+vendor/bundle
