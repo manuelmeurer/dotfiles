@@ -41,7 +41,7 @@ alias testtail="tail -f log/test.log"
 alias prodtail="tail -f log/production.log"
 
 alias ttr="touch tmp/restart.txt"
-alias bub="bundle update baseline && git add Gemfile.lock && git commit -m 'update baseline'"
+alias bub="bundle update baseline && git add Gemfile.lock && git commit -m 'build: update baseline gem'"
 
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
