@@ -1,5 +1,9 @@
 {
   "cleanupPeriodDays": 99999,
+  "additionalDirectories": ["~/code/own/baseline"],
+  "env": {
+    "ENABLE_LSP_TOOL": "1"
+  },
   "permissions": {
     "allow": [
       "Bash(bin/rails:*)",
@@ -49,11 +53,9 @@
     ],
     "deny": []
   },
-  "env": {
-    "ENABLE_LSP_TOOL": "1"
-  },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
     "ruby-lsp@claude-plugins-official": true
-  }
+  },
+  "skipDangerousModePermissionPrompt": true
 }
