@@ -1,6 +1,5 @@
 {
   "cleanupPeriodDays": 99999,
-  "additionalDirectories": ["~/code/own/baseline"],
   "env": {
     "ENABLE_LSP_TOOL": "1"
   },
@@ -55,7 +54,11 @@
   },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
-    "ruby-lsp@claude-plugins-official": true
+    "ruby-lsp@claude-plugins-official": true,
+    "figma@claude-plugins-official": true
   },
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "additionalDirectories": [
+    "~/code/own/baseline"
+  ]
 }
