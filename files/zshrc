@@ -19,7 +19,7 @@ elif [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
 fi
 
 if [ -n "$brew_cmd" ]; then
-  eval "$($brew_cmd shellenv)"
+  eval "$($brew_cmd shellenv zsh)"
 fi
 if type mise > /dev/null; then
   eval "$(mise activate zsh)"
