@@ -56,6 +56,7 @@ function ghpr() {
 }
 
 alias g="git"
+alias lg="lazygit"
 
 function fname() { find . -iname "*$@*"; }
 function psg() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
