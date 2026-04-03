@@ -32,7 +32,6 @@ alias gbtr="gem bump --tag --release"
 
 alias bi="bundle install"
 alias be="bundle exec"
-alias bu="bundle update"
 alias bo="bundle open"
 alias blg="bundle list | grep"
 
@@ -45,6 +44,13 @@ alias bub="bundle update baseline && git add Gemfile.lock && git commit -m 'buil
 
 alias scpresume="rsync --partial --progress --rsh=ssh"
 
+function bu() {
+  if [ $# -eq 0 ]; then
+    bundle update --all
+  else
+    bundle update "$@"
+  fi
+}
 function ghpr() {
   repo=$(git config --list | grep 'remote\.origin\.url' | grep 'github\.com' | sed -E "s/.+(https:\/\/github.com\/|git@github\.com:)(.+)\.git/\2/")
 
@@ -56,6 +62,7 @@ function ghpr() {
 }
 
 alias g="git"
+alias gs="git st"
 alias lg="lazygit"
 
 function fname() { find . -iname "*$@*"; }
