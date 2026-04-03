@@ -11,6 +11,7 @@ add_common_dirs_to_path
 source_if_exists "$HOME/.aliases"
 source_if_exists "$HOME/.asdf/asdf.sh"
 source_if_exists "$HOME/.git-prompt.sh"
+source_if_exists "$HOME/.scm_breeze/scm_breeze.sh"
 
 if type mise > /dev/null; then
   eval "$(mise activate zsh)"
