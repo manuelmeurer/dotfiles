@@ -62,7 +62,6 @@ function ghpr() {
 }
 
 alias g="git"
-alias gs="git st"
 alias lg="lazygit"
 
 function fname() { find . -iname "*$@*"; }
