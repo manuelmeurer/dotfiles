@@ -11,7 +11,6 @@ add_common_dirs_to_path
 source_if_exists "$HOME/.aliases"
 source_if_exists "$HOME/.asdf/asdf.sh"
 source_if_exists "$HOME/.git-prompt.sh"
-source_if_exists "$HOME/.scm_breeze/scm_breeze.sh"
 
 if type mise > /dev/null; then
   eval "$(mise activate zsh)"
@@ -32,6 +31,13 @@ autoload -Uz compinit && compinit
 # Must come after compinit because it calls compdef.
 if type openclaw > /dev/null; then
   source "$HOME/.openclaw/completions/openclaw.zsh"
+fi
+
+# Must come after compinit because it calls compdef.
+# Don't enable SCM Breeze within Claude Code sessions, since it modifies shell behavior and hooks into git commands.
+# It appears to conflict with Claude Code's internal _safe_eval shell wrapper function.
+if [[ -z "$CLAUDECODE" ]]; then
+  source_if_exists "$HOME/.scm_breeze/scm_breeze.sh"
 fi
 
 # Keep more history in memory and file.
