@@ -21,7 +21,7 @@
   co   = checkout
   p    = push
   po   = !bash -c 'git push origin `git rev-parse --abbrev-ref HEAD` -u' -
-  pf   = push --force
+  pf   = push --force-with-lease
   pu   = pull
   pur  = pull --rebase
   m    = merge
