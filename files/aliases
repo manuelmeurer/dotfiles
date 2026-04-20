@@ -4,10 +4,6 @@ else
   alias ls="ls -lah --color=auto"
 fi
 
-if command -v trash &> /dev/null; then
-  alias rm="trash"
-fi
-
 alias ..="cd .."
 
 alias rs="bin/rails server"
@@ -26,7 +22,7 @@ alias rrg="bin/rails routes --trace | grep"
 alias glg="gem list | grep"
 alias gi="gem install"
 alias gu="gem uninstall"
-alias gop="gem open"
+alias go="gem open"
 alias gcl="gem cleanup"
 alias gbtr="gem bump --tag --release"
 
