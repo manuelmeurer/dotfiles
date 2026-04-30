@@ -2,9 +2,10 @@
 .claude/settings.local.json
 .DS_Store
 .env.keys
-.env.conductor
+.env.worktree-manager
 .playwright*
 .sass-cache
+.wrangler/
 .yarn/*
 *.code-workspace
 *.retry

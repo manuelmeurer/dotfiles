@@ -1,6 +1,7 @@
 [user]
   name = Manuel Meurer
   email = manuel@meurer.io
+  signingkey = /Users/manuel/.ssh/id_ed25519.pub
 [alias]
   s    = show
   sh   = stash -u
@@ -117,3 +118,9 @@
   repo = /Users/manuel/code/uplink/app
 [help]
   autocorrect = prompt
+[gpg]
+  format = ssh
+[tag]
+  gpgsign = true
+[gpg "ssh"]
+  allowedSignersFile = /Users/manuel/.config/git/allowed_signers
