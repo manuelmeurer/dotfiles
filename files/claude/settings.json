@@ -128,5 +128,6 @@
   "theme": "auto",
   "additionalDirectories": [
     "~/code/own/baseline"
-  ]
+  ],
+  "skipAutoPermissionPrompt": true
 }

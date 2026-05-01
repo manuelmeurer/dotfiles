@@ -26,5 +26,6 @@ add_common_dirs_to_path() {
   path_prepend_if_exists "/opt/homebrew/bin"
   path_prepend_if_exists "/opt/homebrew/opt/postgresql@18/bin"
   path_prepend_if_exists "/opt/homebrew/opt/sqlite/bin"
+  path_prepend_if_exists "$HOME/.lmstudio/bin"
   path_prepend_if_exists "$HOME/.local/bin"
 }
