@@ -24,8 +24,9 @@ settings.yml
 spec/dummy/app/assets/builds
 spec/dummy/log/*
 spec/dummy/public/assets
+spec/dummy/storage/
 spec/dummy/tmp/**/*
 spec/examples.txt
-storage
+/storage/
 tmp/**/*
 vendor/bundle

@@ -1,9 +1,11 @@
+approval_policy = "never"
+approvals_reviewer = "guardian_subagent"
+file_opener = "vscode"
 model = "gpt-5.5"
 model_reasoning_effort = "high"
 plan_mode_reasoning_effort = "xhigh"
-approvals_reviewer = "user"
-approval_policy = "never"
 sandbox_mode = "workspace-write"
+tools.web_search = "live"
 
 [sandbox_workspace_write]
 network_access = true
@@ -26,20 +28,23 @@ enabled = true
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
 
-[projects."/Users/manuel/code/own/"]
-trust_level = "trusted"
-
 [projects."/Users/manuel/code/own/baseline"]
 trust_level = "trusted"
 
-[projects."/Users/manuel/code/own/funlocked/app"]
+[projects."/Users/manuel/code/own/uplink-app"]
+trust_level = "trusted"
+
+[projects."/Users/manuel/code/own/dasauge-app"]
+trust_level = "trusted"
+
+[projects."/Users/manuel/code/own/funlocked-app"]
 trust_level = "trusted"
 
 [notice]
 hide_full_access_warning = true
 
 [marketplaces.openai-bundled]
-last_updated = "2026-04-27T16:23:58Z"
+last_updated = "2026-05-02T09:21:53Z"
 source_type = "local"
 source = "/Users/manuel/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
@@ -47,6 +52,9 @@ source = "/Users/manuel/.codex/.tmp/bundled-marketplaces/openai-bundled"
 last_updated = "2026-04-27T16:44:00Z"
 source_type = "local"
 source = "/Users/manuel/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[tui]
+status_line = ["model-with-reasoning", "git-branch", "run-state", "context-remaining"]
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
